@@ -1,0 +1,57 @@
+/* Color Schema */
+/* This is where you can add your global colors to use them just use the var() method to use them.  */
+/* Examples: https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
+
+element {
+
+    --black: black;
+}
+
+/* Centering Items */
+/* Remember that Display effects it's childs elements not the one it is assinged to */
+/* Centers things along the y axis or vertically */
+.flex-ctr-col {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+/* Centers things along the x axis or horizontally */
+.flex-ctr-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center; 
+}
+
+/* Pushes the content of a div to either side of the screen. */
+.flex-ctr-sb-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-content: flex-end;
+}
+
+/* Displays html element on the left side of the screen.  Similar to float. */
+.flex-lft-col{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.flex-lft-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+}
