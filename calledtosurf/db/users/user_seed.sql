@@ -6,3 +6,4 @@ create table users (
     auth_id text
     
 )
+
