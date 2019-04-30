@@ -55,3 +55,9 @@
     align-items: center;
     align-content: flex-start;
 }
+
+.aln-cont-bl{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}

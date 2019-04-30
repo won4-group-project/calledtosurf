@@ -1,4 +1,7 @@
+:root {
+    --white: white;
 
+}
 
 .container {
     width: 100%;
@@ -6,7 +9,7 @@
 }
 
 .login {
-    background-color: lightgrey;
+    background-color: var(--white);
     width: 600px;
     height: 400px;
 }
