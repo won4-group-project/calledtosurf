@@ -2,7 +2,7 @@
 /* This is where you can add your global colors to use them just use the var() method to use them.  */
 /* Examples: https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
 
-element {
+.colors {
 
     --black: black;
 }
