@@ -2,16 +2,16 @@ import React from 'react';
 import './Input.css';
 
 
-function Input(props) {
-    return(
+const Input = props => {
+    return (
         <div >
-            <input 
-            className={props.className}
-            id={props.name}
-            name={props.name}
-            type={props.type}
-            value={props.value}
-            onChange={props.handleChange}
+            <input
+                className={props.className}
+                id={props.name}
+                name={props.name}
+                type={props.inputType}
+                value={props.value}
+                onChange={props.handleChange}
             />
         </div>
     );
