@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import "./shoes.css";
 import axios from "axios";
 class Shoes extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       shoes: []
     };
@@ -15,13 +15,20 @@ class Shoes extends Component {
   }
 
   getShoeList() {
-    axios.get("/api/shoelist").then(res => {
+    axios.get("/api/shoes").then(res => {
+      console.log("shoesssss" + res.data);
+
       this.setState({ shoes: res.data });
-      console.log("shoes" + res);
     });
   }
   render() {
-    return <div> shoes</div>;
+    this.state.shoes.map(shoe => (
+      <tr key={shoe.product_id}>
+        <td>{shoe.title}</td>
+      </tr>
+    ));
+
+    return <div> hello</div>;
   }
 }
 
