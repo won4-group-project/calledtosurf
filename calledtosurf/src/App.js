@@ -15,7 +15,7 @@ function App() {
     <section className="App">
       <section>
         Home Page
-        {/* <Login /> */}
+        <Login />
         <CreateAcct />
       </section>
     </section>

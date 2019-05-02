@@ -44,8 +44,8 @@ class Login extends Component {
         console.log("App.js: " + this.state.email)
         return (
             <section className="container flex-ctr-col">
-                <section className="login">
-                    <div>Login</div>
+                <section className="form-wrapper">
+                    <h2>Login</h2>
                     <form className="aln-cont-bl" onSubmit={this.handleSubmit} >
                         <label>EMAIL</label>
                         <Input className={""}
