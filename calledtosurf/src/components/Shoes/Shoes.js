@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import "./shoes.css";
 import axios from "axios";
 class Shoes extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       shoes: []
     };
@@ -15,13 +14,22 @@ class Shoes extends Component {
   }
 
   getShoeList() {
-    axios.get("/api/shoelist").then(res => {
+    axios.get("/api/shoes").then(res => {
+      console.log("shoesssss" + res.data);
+
       this.setState({ shoes: res.data });
-      console.log("shoes" + res);
     });
   }
   render() {
-    return <div> shoes</div>;
+    let list = this.state.shoes.map(shoe => (
+      <ul key={shoe.product_id}>
+        <li>
+          {shoe.title} {shoe.category}
+        </li>
+      </ul>
+    ));
+
+    return <div> {list}</div>;
   }
 }
 
