@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./shoes.css";
 import axios from "axios";
 class Shoes extends Component {
   constructor() {
@@ -22,13 +21,15 @@ class Shoes extends Component {
     });
   }
   render() {
-    this.state.shoes.map(shoe => (
-      <tr key={shoe.product_id}>
-        <td>{shoe.title}</td>
-      </tr>
+    let list = this.state.shoes.map(shoe => (
+      <ul key={shoe.product_id}>
+        <li>
+          {shoe.title} {shoe.category}
+        </li>
+      </ul>
     ));
 
-    return <div> hello</div>;
+    return <div> {list}</div>;
   }
 }
 
