@@ -12,7 +12,7 @@ select *
 from products;
 
 
-INSERT INTO products(category, title, description, sizes, price, item_num) 
+INSERT INTO products (category, title, description, sizes, price, item_num) 
 
 VALUES 
 ('Dresses', 'Avondale Dress', 'Button-up dress with dirndle waist, embroidered front bodice, tie belt and front patch pockets.', 'S M L', 48 , 1), 
