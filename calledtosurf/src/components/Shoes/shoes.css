@@ -1,3 +1,20 @@
-body{
-    font-weight: 400;
+body,
+html {
+  background-color: #ffffff !important;
+}
+.shoe_container {
+  background-color: #ffffff !important;
+  min-height: 200vh;
+  width: 70%;
+  z-index: 100;
+}
+.card {
+  float: left;
+  margin: 30px;
+  box-sizing: border-box;
+}
+.img_container {
+  width: 200px;
+  margin: 40px;
+  /* padding: 30px; */
 }
