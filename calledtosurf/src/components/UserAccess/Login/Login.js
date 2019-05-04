@@ -5,6 +5,7 @@ import Input from '../../Input/Input.js';
 
 import './Login.css';
 import '../../Global/Global.css';
+import Axios from 'axios';
 
 class Login extends Component {
     constructor(props) {
@@ -20,6 +21,8 @@ class Login extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    // I need to check the id against the db.  Once state has been set I need to do an axios call to varify the email.
+
     handleChange(event) {
         const name = event.target.name;
         const value = event.target.value;
@@ -34,12 +37,17 @@ class Login extends Component {
     }
 
     handleSubmit(event) {
-        // this.handleChange();
+        // axios.get and check the db against the state. 
+        // how do I use passport here?
+        Axios.get('/get_users/', function(req, res){
+            
+        })
+
         console.log('Email: ' + this.state.user.email + " password: " + this.state.user.password);
         event.preventDefault();
     }
 
-    
+
 
     render() {
 
