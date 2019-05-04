@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Card, Container } from "react-bootstrap";
-import "../Shoes/Shoes.css";
-import img from "../Shoes/images/cts-shoes-158_1800x1800.jpg";
+import "../Shoes/shoes.css";
 class Shoes extends Component {
   constructor() {
     super();
@@ -33,12 +32,14 @@ class Shoes extends Component {
             id={shoe.product_id}
           >
             <Card.Body>
-              <img
-                alt="poster"
-                width="170"
-                src="https://cdn.shopify.com/s/files/1/3000/9920/products/cts-shoes-159_180x.jpg"
-                className="img_container"
-              />
+              <div className="zoom">
+                <img
+                  alt="poster"
+                  width="170"
+                  src="https://cdn.shopify.com/s/files/1/3000/9920/products/cts-shoes-159_180x.jpg"
+                  className="img_container"
+                />
+              </div>
             </Card.Body>
           </Card>
         ))}
