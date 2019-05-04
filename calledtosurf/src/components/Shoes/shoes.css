@@ -6,7 +6,7 @@ html {
   background-color: #ffffff !important;
   min-height: 200vh;
   width: 70%;
-  z-index: 100;
+  z-index: 100; 
 }
 .card {
   float: left;
