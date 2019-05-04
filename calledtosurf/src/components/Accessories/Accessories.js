@@ -14,7 +14,7 @@ class Accessories extends Component {
   }
 
   getAccessoryList() {
-    axios.get("/api/shoes").then(res => {
+    axios.get("/api/accessories").then(res => {
       console.log("shoesssss" + res.data);
 
       this.setState({ accessories: res.data });
