@@ -14,7 +14,32 @@ html {
   box-sizing: border-box;
 }
 .img_container {
-  width: 200px;
+  width: 180px;
+  height: 270px;
   margin: 40px;
   /* padding: 30px; */
+}
+
+.zoom {
+  position: relative;
+  overflow: hidden;
+}
+
+.zoom:hover img {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  animation: fade-in 1s cubic-bezier(0.26, 0.54, 0.32, 1) 0s forwards;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.26, 0.54, 0.32, 1);
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  animation-name: fade-in;
+}
+
+.zoom img {
+  transition: all 1.4s;
+  -webkit-transition: all 1.4s;
 }
