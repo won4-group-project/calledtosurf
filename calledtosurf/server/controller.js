@@ -2,7 +2,7 @@ module.exports = {
   getAll: (req, res, next) => {
     const dbInstance = req.app.get("db");
 
-    dbInstance
+    dbInstance.product
       .get_all_product()
       .then(shoes => res.status(200).send(shoes))
       .catch(err => {

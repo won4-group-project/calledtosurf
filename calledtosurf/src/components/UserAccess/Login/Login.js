@@ -29,13 +29,13 @@ class Login extends Component {
             }
 
         }, () =>
-                console.log("handlChange: " + this.state.user)
+                console.log("handlChange: Email: " + this.state.user.email + "Password: " + this.state.user.password)
         );
     }
 
     handleSubmit(event) {
         // this.handleChange();
-        console.log('Email: ' + this.state.email + " password: " + this.state.password);
+        console.log('Email: ' + this.state.user.email + " password: " + this.state.user.password);
         event.preventDefault();
     }
 
@@ -44,24 +44,20 @@ class Login extends Component {
         console.log("App.js: " + this.state.email)
         return (
             <section className="container flex-ctr-col">
-                <section className="login">
-                    <div>Login</div>
+                <section className="form-wrapper">
+                    <h2>Login</h2>
                     <form className="aln-cont-bl" onSubmit={this.handleSubmit} >
                         <label>EMAIL</label>
                         <Input className={""}
                             inputType={"email"}
                             name={"email"}
                             value={this.state.user.email}
-                            handleChange={this.handleChange}
+                            onChange={this.handleChange}
                         />
-                        {/* <input
-                            type="email"
-                            name="email"
-                            onChange={ this.handleChange } /> */}
                         <label>PASSWORD</label>
-                        <Input inputType="password"
+                        <Input inputType="text"
                             name="password"
-                            value={this.state.password}
+                            value={this.state.user.password}
                             onChange={this.handleChange}
                         />
                         <input type="submit" value="SIGN IN" />

@@ -22,27 +22,19 @@ class Header extends Component{
                 <div id='social_nav' className='social'>
                     <ul>
                         <li>
-                            <a href='https://www.facebook.com/calledtosurf' title='Called to Surf on Facebook'>
-                                <img src={Facebook}/>
-                            </a>
+                            <a href='https://www.facebook.com/calledtosurf' title='Called to Surf on Facebook'><img src={Facebook}/></a>
                         </li>
 
                         <li>
-                            <a href='https://twitter.com/calledtosurf' title='Called to Surf on Twitter'>
-                                <img src={Twitter}/>
-                            </a>
+                            <a href='https://twitter.com/calledtosurf' title='Called to Surf on Twitter'><img src={Twitter}/></a>
                         </li>  
 
                         <li>
-                            <a href='https://www.pinterest.com/calledtosurf' title='Called to Surf on Pinterest'>
-                                <img src={Pinterest}/>
-                            </a>
+                            <a href='https://www.pinterest.com/calledtosurf' title='Called to Surf on Pinterest'><img src={Pinterest}/></a>
                         </li>  
 
                         <li>
-                            <a href='https://www.instagram.com/calledtosurf' title='Called to Surf on Instagram'>
-                                <img src={Instagram}/>
-                            </a>
+                            <a href='https://www.instagram.com/calledtosurf' title='Called to Surf on Instagram'><img src={Instagram}/></a>
                         </li>
                     </ul>
                 </div>

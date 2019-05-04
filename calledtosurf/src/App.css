@@ -1,11 +1,21 @@
-.App {
+/* .App {
   background-color: aquamarine;
   text-align: center;
   width: 100%;
   min-height: 95vh;
+} */
+
+html {
+  height: 100%;
 }
-
-
+body {
+  font-family: "Corben", cursive;
+  background-color: white;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  padding-bottom: 60px;
+}
 
 .App-header {
   background-color: #282c34;
@@ -16,8 +26,4 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-form{
-  margin-left: 40%;
 }
