@@ -39,9 +39,9 @@ class Login extends Component {
     handleSubmit(event) {
         // axios.get and check the db against the state. 
         // how do I use passport here?
-        Axios.get('/get_users/', function(req, res){
+        // Axios.get('/get_users/').then( res =>{
             
-        })
+        // })
 
         console.log('Email: ' + this.state.user.email + " password: " + this.state.user.password);
         event.preventDefault();
