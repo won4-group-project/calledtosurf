@@ -31,6 +31,11 @@ function App() {
               Shoes
             </Link>
           </div>
+          <div>
+            <Link to="/accessories" className="links">
+              Accessories
+            </Link>
+          </div>
         </nav>
         {routes}
       </div>

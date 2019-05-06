@@ -6,7 +6,7 @@ import boots from "../../assets/Shoes/Boots/58a.jpg";
 import heels from "../../assets/Shoes/Heels/61a.jpg";
 import sandals from "../../assets/Shoes/Sandals/75b.jpg";
 import sneakers from "../../assets/Shoes/Sneakers/77a.jpg";
-// import filter from "../../assets/Icons/filter.svg";
+import filter from "../../assets/Icons/filter.png";
 class Shoes extends Component {
   constructor() {
     super();
@@ -29,55 +29,52 @@ class Shoes extends Component {
   }
   render() {
     return (
-      // <Container className="shoe_container">
-      //   {this.state.shoes.map(shoe => (
-      //     <Card
-      //       border="default"
-      //       style={{ width: "13rem" }}
-      //       id={shoe.product_id}
-      //     >
-      //       <Card.Body>
-      //         <div className="zoom">
-      //           <img
-      //             alt="poster"
-      //             width="170"
-      //             src="https://cdn.shopify.com/s/files/1/3000/9920/products/cts-shoes-159_180x.jpg"
-      //             // className="img_container"
-      //           />
-      //         </div>
-      //       </Card.Body>
-      //     </Card>
-      //   ))}
-      // </Container>
       <Container className="shoe_container">
-        <Row>
-          <Col className="zoom">
-            <a href="" className="collection_item">
-              <img alt="poster" src={boots} />
-              <span className="collection_title"> Boots</span>
-            </a>
-          </Col>
-          <Col className="zoom">
-            <a href="" className="collection_item">
-              <img alt="poster" src={heels} />
-              <span className="collection_title"> Heels</span>
-            </a>
-          </Col>
-          <Col className="zoom">
-            <a href="" className="collection_item">
-              <img alt="poster" src={sandals} />
-              <span className="collection_title"> Sandals</span>
-            </a>
-          </Col>
-          <Col className="zoom">
-            <a href="" className="collection_item">
-              <img alt="poster" src={sneakers} />
-              <span className="collection_title"> Sneakers</span>
-            </a>
-          </Col>
-        </Row>
-        <div className="collection-filter">
-          <div className="filter_item">products</div>
+        <div>
+          <Row>
+            <Col className="zoom">
+              <a href="" className="collection_item">
+                <img alt="poster" src={boots} />
+                <span className="collection_title"> Boots</span>
+              </a>
+            </Col>
+            <Col className="zoom">
+              <a href="" className="collection_item">
+                <img alt="poster" src={heels} />
+                <span className="collection_title"> Heels</span>
+              </a>
+            </Col>
+            <Col className="zoom">
+              <a href="" className="collection_item">
+                <img alt="poster" src={sandals} />
+                <span className="collection_title"> Sandals</span>
+              </a>
+            </Col>
+            <Col className="zoom">
+              <a href="" className="collection_item">
+                <img alt="poster" src={sneakers} />
+                <span className="collection_title"> Sneakers</span>
+              </a>
+            </Col>
+          </Row>
+          <div className="collection-filter">
+            <div className="filter_item">
+              <img alt="filter" src={filter} className="filter_img" />
+              Filter
+            </div>
+            <div className="item_count">35 products</div>
+            <div className="item_sort">Sort</div>
+          </div>
+
+          <div className="shoes_div">
+            {this.state.shoes.map(shoe => (
+              <Row className="shoes_div" border="default" id={shoe.product_id}>
+                <Col className="img_div">
+                  <img alt="poster" src={sandals} />
+                </Col>
+              </Row>
+            ))}
+          </div>
         </div>
       </Container>
     );
