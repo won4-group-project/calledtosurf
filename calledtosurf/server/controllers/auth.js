@@ -12,7 +12,7 @@ module.exports = {
       },
 
     signUp: (req, res, next) => {
-        let newUser = {};
+        // let newUser = {};
         const {first_name, last_name, email, phone, user_password } = req.body;
         req.app.get('db').users.create_user()
         .then( newUser =>{

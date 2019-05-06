@@ -17,41 +17,55 @@ class Login extends Component {
             }
 
         };
-        this.handleChange = this.handleChange.bind(this);
+        this.handleUserEmail = this.handleUserEmail.bind(this);
+        this.handleUserPassword = this.handleUserPassword.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     // I need to check the id against the db.  Once state has been set I need to do an axios call to varify the email.
-
-    handleChange(event) {
-        const name = event.target.name;
-        const value = event.target.value;
+    
+    handleUserEmail(event) {
+        // const value = event.target.value;
         this.setState({
             user: {
-                [name]: value
+                email: event.target.value
             }
 
         }, () =>
-                console.log("handlChange: Email: " + this.state.user.email + "Password: " + this.state.user.password)
+                console.log(`Email: ${this.state.user.email}`)
         );
     }
 
-    handleSubmit(event) {
-        // axios.get and check the db against the state. 
-        // how do I use passport here?
-        Axios.get('/get_users/').then( res =>{
-            console.log(res.data);
-        })
-
-        console.log('Email: ' + this.state.user.email + " password: " + this.state.user.password);
-        event.preventDefault();
+    handleUserPassword(event){
+        // const value = event.target.value;
+        this.setState({
+            user:{
+                password: event.target.value
+            }
+        }, ()=>{
+            console.log(`Password: ${this.state.user.password}.`)
+        });
     }
 
+    handleSubmit() {
+        let { email, password } = this.state.user
+       
+        Axios.get('/api/login/').then( res =>{
+            // let {email, user_password} = res.data;
+            if(email === res.data.email){
+                if(password === res.data.user_password){
+                    console.log(true);
+                }
+            } else {
+                console.log(false);
+            }
+        });
+
+    }
 
 
     render() {
 
-        console.log("App.js: " + this.state.email)
         return (
             <section className="container flex-ctr-col">
                 <section className="form-wrapper">
@@ -62,19 +76,18 @@ class Login extends Component {
                             inputType={"email"}
                             name={"email"}
                             value={this.state.user.email}
-                            onChange={this.handleChange}
+                            onChange={this.handleUserEmail}
                         />
                         <label>PASSWORD</label>
                         <Input inputType="text"
                             name="password"
                             value={this.state.user.password}
-                            onChange={this.handleChange}
+                            onChange={this.handleUserPassword}
                         />
                         <input type="submit" value="SIGN IN" />
                         {/* Convert this into a react Link */}
                         <a href="#" >Create account</a>
                     </form>
-
                 </section>
             </section>
         );

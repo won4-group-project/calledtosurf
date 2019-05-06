@@ -6,7 +6,7 @@ import boots from "../../assets/Shoes/Boots/58a.jpg";
 import heels from "../../assets/Shoes/Heels/61a.jpg";
 import sandals from "../../assets/Shoes/Sandals/75b.jpg";
 import sneakers from "../../assets/Shoes/Sneakers/77a.jpg";
-import filter from "../../assets/Icons/filter.svg";
+// import filter from "../../assets/Icons/filter.svg";
 class Shoes extends Component {
   constructor() {
     super();
