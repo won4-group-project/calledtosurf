@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import Input from '../../Input/Input.js';
 
 import './Login.css';
@@ -11,56 +11,55 @@ class Login extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            user: {
                 email: '',
                 password: '',
-            }
-
+                storedUserData: [],
+                redirect: false
         };
-        this.handleUserEmail = this.handleUserEmail.bind(this);
-        this.handleUserPassword = this.handleUserPassword.bind(this);
+        this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     // I need to check the id against the db.  Once state has been set I need to do an axios call to varify the email.
     
-    handleUserEmail(event) {
-        // const value = event.target.value;
+    handleChange(event) {
+        const name = event.target.name;
+        const value = event.target.value;
         this.setState({
-            user: {
-                email: event.target.value
-            }
-
+            [name]: value
         }, () =>
-                console.log(`Email: ${this.state.user.email}`)
+                console.log(value)
         );
     }
 
-    handleUserPassword(event){
-        // const value = event.target.value;
-        this.setState({
-            user:{
-                password: event.target.value
+    handleSubmit() {
+        let {email, password} = this.state;
+        
+        Axios.get('/api/login/').then( res =>{
+            
+            this.setState({
+                storedUserData: res.data
+            });
+            let { storedUserData } = this.state;
+
+            for(let i = 0; i < storedUserData.length; i++){
+                let storedPassword = storedUserData[i].user_password;
+                let storedEmail= storedUserData[i].email;
+                if(email !== storedEmail && password !== storedPassword){
+                   console.log(i + 1);
+                } else if(email === storedEmail && password === storedPassword) {
+                   this.setState({redirect: true});
+                } else {
+                    return alert("Wrong username or password");
+                }
             }
-        }, ()=>{
-            console.log(`Password: ${this.state.user.password}.`)
         });
     }
 
-    handleSubmit() {
-        let { email, password } = this.state.user
-       
-        Axios.get('/api/login/').then( res =>{
-            // let {email, user_password} = res.data;
-            if(email === res.data.email){
-                if(password === res.data.user_password){
-                    console.log(true);
-                }
-            } else {
-                console.log(false);
-            }
-        });
-
+    renderRedirect() {
+        if(this.state.redirect) {
+            return <Redirect to="/" />
+        }
     }
 
 
@@ -75,19 +74,20 @@ class Login extends Component {
                         <Input className={""}
                             inputType={"email"}
                             name={"email"}
-                            value={this.state.user.email}
-                            onChange={this.handleUserEmail}
+                            value={this.state.email}
+                            onChange={this.handleChange}
                         />
                         <label>PASSWORD</label>
                         <Input inputType="text"
                             name="password"
-                            value={this.state.user.password}
-                            onChange={this.handleUserPassword}
+                            value={this.state.password}
+                            onChange={this.handleChange}
                         />
                         <input type="submit" value="SIGN IN" />
                         {/* Convert this into a react Link */}
                         <a href="#" >Create account</a>
                     </form>
+                    {this.renderRedirect()}
                 </section>
             </section>
         );
