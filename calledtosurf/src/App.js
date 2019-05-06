@@ -23,7 +23,7 @@ function App() {
           </div>
           <div>
             <Link to="/login" className="links">
-              Sigin
+              Login
             </Link>
           </div>
           <div>
