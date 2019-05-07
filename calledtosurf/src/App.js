@@ -7,39 +7,33 @@ import "./App.css";
 // import Login from "./components/UserAccess/Login/Login.js";
 // import Shoes from "./components/Shoes/Shoes.js";
 // import CreateAcct from "./components/UserAccess/CreateAcct/CreateAcct.js";
-import { HashRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import routes from "./routes";
 import { Link } from "react-router-dom";
+import Header from "./components/Header/Header";
 
 function App() {
   return (
-    <HashRouter>
-      <div>
-        <nav className="nav">
-          <div className="link-wrap">
-            <Link to="/createaccount" className="links">
-              CreateAcct
-            </Link>
-          </div>
-          <div>
-            <Link to="/login" className="links">
-              Login
-            </Link>
-          </div>
-          <div>
-            <Link to="/shoes" className="links">
-              Shoes
-            </Link>
-          </div>
-          <div>
-            <Link to="/accessories" className="links">
-              Accessories
-            </Link>
-          </div>
-        </nav>
-        {routes}
-      </div>
-    </HashRouter>
+    <div>
+      <Header />
+      <BrowserRouter>
+        <div>
+          <nav className="nav">
+            <div className="link-wrap">
+              <Link to="/createaccount" className="links">
+                CreateAcct
+              </Link>
+            </div>
+            <div>
+              <Link to="/login" className="links">
+                Sigin
+              </Link>
+            </div>
+          </nav>
+          {routes}
+        </div>
+      </BrowserRouter>
+    </div>
   );
 }
 
