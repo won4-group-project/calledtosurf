@@ -30,12 +30,16 @@ class CreateAcct extends Component {
         console.log();
     }
 
+    handleSubmit(){
+
+    }
+
     render() {
         return (
             <section className="container flex-ctr-col">
                 <section className="form-wrapper" >
                     <h2>CREATE ACCOUNT</h2>
-                    <form className="flex-lft-col">
+                    <form className="flex-lft-col" onSubmit={this.handleSubmit}>
                         <label>FIRST NAME</label>
                         <Input
                             type={"text"}
