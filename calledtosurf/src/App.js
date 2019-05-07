@@ -11,6 +11,7 @@ import { BrowserRouter } from "react-router-dom";
 import routes from "./routes";
 import { Link } from "react-router-dom";
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <BrowserRouter>
         <div>{routes}</div>
       </BrowserRouter>
+      <Footer />
     </div>
   );
 }

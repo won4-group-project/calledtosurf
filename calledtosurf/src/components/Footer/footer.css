@@ -1,0 +1,9 @@
+.site-footer_link {
+  margin: 0;
+  list-style: none;
+  font-size: 11.9px;
+}
+
+.site-footer a {
+  color: black;
+}
