@@ -19,16 +19,16 @@ function App() {
       <BrowserRouter>
         <div>
           <nav className="nav">
-            <div className="link-wrap">
+            {/* <div className="link-wrap">
               <Link to="/createaccount" className="links">
                 CreateAcct
               </Link>
-            </div>
-            <div>
+            </div> */}
+            {/* <div>
               <Link to="/login" className="links">
                 Sigin
               </Link>
-            </div>
+            </div> */}
           </nav>
           {routes}
         </div>

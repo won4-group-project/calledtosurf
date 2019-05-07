@@ -4,11 +4,12 @@ import Shoes from "./components/Shoes/Shoes";
 import CreateAcct from "./components/UserAccess/CreateAcct/CreateAcct";
 import Login from "./components/UserAccess/Login/Login";
 import Accessories from "./components/Accessories/Accessories";
+import Clothing from "./components/Clothing/Clothing";
 export default (
   <Switch>
     <Route component={CreateAcct} exact path="/createaccount" />
     <Route component={Login} exact path="/login" />
-
+    <Route component={Clothing} exact path="/clothing" />
     <Route component={Shoes} path="/shoes" />
     <Route component={Accessories} path="/accessories" />
   </Switch>
