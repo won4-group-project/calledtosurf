@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "../Global/Global.css";
-import Twitter from "../../assets/Icons/Pinterest.png";
-import Pinterest from "../../assets/Icons/Pinterest.png";
-import Instagram from "../../assets/Icons/Instagram.png";
+import Twitter from "../../assets/Icons/twitter.png";
+import Pinterest from "../../assets/Icons/pinterest.png";
+import Instagram from "../../assets/Icons/instagram.png";
 import Logo from "../../assets/Icons/CTS Logo.png";
 import Search from "../../assets/Icons/search_glass.png";
 import SignIn from "../../assets/Icons/avatar.png";
@@ -87,7 +87,7 @@ class Header extends Component {
                     <div className="header-item header-item-logo">
                       <div className="h1 site-header_logo">
                         <a href="" className="site-header_logo-link">
-                          <img src={Logo} />
+                          <img alt="logo" src={Logo} />
                         </a>
                       </div>
                     </div>
@@ -98,13 +98,21 @@ class Header extends Component {
                             href="/login"
                             className="site-nav_link site-nav_link-icon"
                           >
-                            <img src={SignIn} className="icon icon-user" />
+                            <img
+                              alt="user"
+                              src={SignIn}
+                              className="icon icon-user"
+                            />
                           </a>
                           <a
                             href=""
                             className="site-nav_link site-nav_link-icon "
                           >
-                            <img src={Shopping} className="cart-link" />
+                            <img
+                              alt="cart"
+                              src={Shopping}
+                              className="cart-link"
+                            />
                           </a>
                         </div>
                       </div>

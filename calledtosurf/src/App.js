@@ -17,21 +17,7 @@ function App() {
     <div>
       <Header />
       <BrowserRouter>
-        <div>
-          <nav className="nav">
-            {/* <div className="link-wrap">
-              <Link to="/createaccount" className="links">
-                CreateAcct
-              </Link>
-            </div> */}
-            {/* <div>
-              <Link to="/login" className="links">
-                Sigin
-              </Link>
-            </div> */}
-          </nav>
-          {routes}
-        </div>
+        <div>{routes}</div>
       </BrowserRouter>
     </div>
   );
