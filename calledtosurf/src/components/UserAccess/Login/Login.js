@@ -35,7 +35,7 @@ class Login extends Component {
     handleSubmit() {
         let {email, password} = this.state;
         
-        Axios.get('/api/login/').then( res =>{
+        Axios.get('/login/').then( res =>{
             
             this.setState({
                 storedUserData: res.data

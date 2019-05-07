@@ -33,7 +33,10 @@ class CreateAcct extends Component {
     }
 
     handleSubmit(){
-        Axios.post()
+        Axios.post('/signup')
+        .then( res =>{
+            console.log(res.data);
+        })
         // See if a user with the given email exists
 
         // If a user with email does exist, return an error

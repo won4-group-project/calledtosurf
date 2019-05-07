@@ -11,18 +11,18 @@ module.exports = {
           });
       },
 
-    signUp: (req, res, next) => {
+    signup: (req, res, next) => {
        
-        const {first_name, last_name, email, user_password } = req.body;
-        req.app.get('db').users.create_user(first_name, last_name, email, user_password)
-        .then( newUser =>{
-            newUser = {
-                first_name: first_name,
-                last_name: last_name,
-                email: email,
-                password: user_password
-            }
-        })
-        res.status(200).send({success: 'true'})
+        // const {first_name, last_name, email, user_password } = req.body;
+        // req.app.post('db').users.create_user(first_name, last_name, email, user_password)
+        // .then( newUser =>{
+        //     newUser = {
+        //         first_name: first_name,
+        //         last_name: last_name,
+        //         email: email,
+        //         password: user_password
+        //     }
+        // })
+        // res.status(200).send( newUser );
     }
 }
