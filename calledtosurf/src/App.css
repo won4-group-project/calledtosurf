@@ -15,6 +15,7 @@ body {
   margin: 0;
   position: relative;
   padding-bottom: 60px;
+  font-weight: 400;
 }
 
 .App-header {

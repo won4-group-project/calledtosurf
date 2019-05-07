@@ -54,6 +54,12 @@ class Shoes extends Component {
               <a href="" className="collection_item">
                 <img alt="poster" src={sneakers} />
                 <span className="collection_title"> Sneakers</span>
+                {/* <div className="grid-product__meta">
+                  <div className="grid-product__title grid-product__title--body">
+                  
+                  </div> 
+                  <div className="grid-product__title grid-product__title--body" />
+                </div> */}
               </a>
             </Col>
           </Row>
@@ -70,7 +76,17 @@ class Shoes extends Component {
             {this.state.shoes.map(shoe => (
               <Row className="shoes_div" border="default" id={shoe.product_id}>
                 <Col className="img_div">
-                  <img alt="poster" src={sandals} />
+                  <a href="">
+                    <img alt="poster" src={sandals} />
+                    <div className="grid-product__meta">
+                      <div className="grid-product__title grid-product__title--body">
+                        {shoe.title}
+                      </div>
+                      <div className="grid-product__price">
+                        ${shoe.price}.00
+                      </div>
+                    </div>
+                  </a>
                 </Col>
               </Row>
             ))}
