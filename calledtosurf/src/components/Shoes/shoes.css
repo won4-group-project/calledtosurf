@@ -13,6 +13,7 @@ html {
   justify-content: center;
   align-items: stretch;
   align-content: stretch;
+  margin-top: 25px;
 }
 
 .zoom {

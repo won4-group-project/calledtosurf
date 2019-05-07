@@ -87,7 +87,7 @@ class Header extends Component {
                     <div className="header-item header-item-logo">
                       <div className="h1 site-header_logo">
                         <a href="" className="site-header_logo-link">
-                          <img src={Logo} />
+                          <img alt="logo" src={Logo} />
                         </a>
                       </div>
                     </div>
@@ -98,13 +98,21 @@ class Header extends Component {
                             href="/login"
                             className="site-nav_link site-nav_link-icon"
                           >
-                            <img src={SignIn} className="icon icon-user" />
+                            <img
+                              alt="user"
+                              src={SignIn}
+                              className="icon icon-user"
+                            />
                           </a>
                           <a
                             href=""
                             className="site-nav_link site-nav_link-icon "
                           >
-                            <img src={Shopping} className="cart-link" />
+                            <img
+                              alt="cart"
+                              src={Shopping}
+                              className="cart-link"
+                            />
                           </a>
                         </div>
                       </div>
