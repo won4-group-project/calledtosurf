@@ -5,9 +5,9 @@ const massive = require("massive");
 const app = express();
 const controller = require("../server/controller");
 const Auth = require("./controllers/auth");
-const cors = require("cors");
+// const cors = require("cors");
 app.use(bodyParser.json());
-app.use(cors());
+// app.use(cors());
 
 massive(process.env.CONNECTION_STRING)
   .then(dbInstance => {
