@@ -95,7 +95,7 @@ class Header extends Component {
                       <div className="site-nav">
                         <div className="site-nav-icons">
                           <a
-                            href=""
+                            href="/login"
                             className="site-nav_link site-nav_link-icon"
                           >
                             <img src={SignIn} className="icon icon-user" />
@@ -114,7 +114,7 @@ class Header extends Component {
                     <ul className="site-nav site-navigation small--hide">
                       <li className="site-nav__item site-nav__expanded-item site-nav--has-dropdown site-nav--is-megamenu">
                         <a
-                          href=""
+                          href="/clothing"
                           class="site-nav__link site-nav__link--underline site-nav__link--has-dropdown"
                         >
                           Clothing
@@ -141,7 +141,63 @@ class Header extends Component {
                           href=""
                           class="site-nav__link site-nav__link--underline site-nav__link--has-dropdown"
                         >
+                          Kids + Baby
+                        </a>
+                      </li>
+                      <li className="site-nav__item site-nav__expanded-item site-nav--has-dropdown site-nav--is-megamenu">
+                        <a
+                          href=""
+                          class="site-nav__link site-nav__link--underline site-nav__link--has-dropdown"
+                        >
+                          Wedding
+                        </a>
+                      </li>
+                      <li className="site-nav__item site-nav__expanded-item site-nav--has-dropdown site-nav--is-megamenu">
+                        <a
+                          href=""
+                          class="site-nav__link site-nav__link--underline site-nav__link--has-dropdown"
+                        >
+                          Home
+                        </a>
+                      </li>
+                      <li className="site-nav__item site-nav__expanded-item site-nav--has-dropdown site-nav--is-megamenu">
+                        <a
+                          href=""
+                          class="site-nav__link site-nav__link--underline site-nav__link--has-dropdown"
+                        >
+                          Beauty
+                        </a>
+                      </li>
+                      <li className="site-nav__item site-nav__expanded-item site-nav--has-dropdown site-nav--is-megamenu">
+                        <a
+                          href=""
+                          class="site-nav__link site-nav__link--underline site-nav__link--has-dropdown"
+                        >
                           Sale
+                        </a>
+                      </li>
+                      <li className="site-nav__item site-nav__expanded-item site-nav--has-dropdown site-nav--is-megamenu">
+                        <a
+                          href=""
+                          class="site-nav__link site-nav__link--underline site-nav__link--has-dropdown"
+                        >
+                          Gifts
+                        </a>
+                      </li>
+                      <li className="site-nav__item site-nav__expanded-item site-nav--has-dropdown site-nav--is-megamenu">
+                        <a
+                          href=""
+                          class="site-nav__link site-nav__link--underline site-nav__link--has-dropdown"
+                        >
+                          Gifts Cards
+                        </a>
+                      </li>
+                      <li className="site-nav__item site-nav__expanded-item site-nav--has-dropdown site-nav--is-megamenu">
+                        <a
+                          href=""
+                          class="site-nav__link site-nav__link--underline site-nav__link--has-dropdown"
+                        >
+                          Bucket List
                         </a>
                       </li>
                     </ul>
