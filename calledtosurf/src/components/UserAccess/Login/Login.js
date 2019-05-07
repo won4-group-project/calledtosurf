@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import Input from '../../Input/Input.js';
 
 import './Login.css';
@@ -85,7 +85,7 @@ class Login extends Component {
                         />
                         <input type="submit" value="SIGN IN" />
                         {/* Convert this into a react Link */}
-                        <a href="#" >Create account</a>
+                        <a href="/createAccount" >Create account</a>
                     </form>
                     {this.renderRedirect()}
                 </section>

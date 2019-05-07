@@ -44,21 +44,25 @@ class CreateAcct extends Component {
                         <Input
                             type={"text"}
                             name={"first_name"}
+                            onChange={this.createNewUser}
                         />
                         <label>LAST NAME</label>
                         <Input
                             type={"text"}
                             name={"last_name"}
+                            onChange={this.createNewUser}
                         />
                         <label>EMAIL</label>
                         <Input
                             type={"email"}
                             name={"email"}
+                            onChange={this.createNewUser}
                         />
                         <label>PASSWORD</label>
                         <Input
                             type={"password"}
                             name={"password"}
+                            onChange={this.createNewUser}
                         />
                         <input type="submit" value="CREATE" />
                     </form>
