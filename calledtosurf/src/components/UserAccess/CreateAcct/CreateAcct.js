@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Axios from 'axios';
 
 // ***** Components ***** //
 import Input from '../../Input/Input';
@@ -11,26 +12,35 @@ import './CreateAcct.css';
 class CreateAcct extends Component {
     constructor() {
         super();
-        this.state = {
-            newUser: {
+        this.state = {            
                 first_name: '',
                 last_name: '',
                 email: '',
                 password: '',
 
-            }
-
-
-
         }
         this.createNewUser = this.createNewUser.bind(this);
         
     }
-    createNewUser() {
-        console.log();
+    createNewUser(event) {
+        const name = event.target.name;
+        const value = event.target.value;
+        this.setState({
+            [name]: value
+        }, () =>
+                console.log(value)
+        );
     }
 
     handleSubmit(){
+        Axios.post()
+        // See if a user with the given email exists
+
+        // If a user with email does exist, return an error
+
+        // If a user with an email does not exist, create and save user record.
+
+        // Respond to request indicating the user was created
 
     }
 
