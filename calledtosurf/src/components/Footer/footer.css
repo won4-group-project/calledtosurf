@@ -58,6 +58,7 @@
 
 .footer__item-padding {
   padding-right: 60px;
+  width: 390px;
 }
 
 .footer__title {
@@ -164,4 +165,14 @@ a {
 
   vertical-align: middle;
   fill: currentColor;
+}
+
+.footer__newsletter-input {
+  padding: 10px 45px 10px 0;
+  background-color: #fff;
+  color: #000;
+  max-width: 300px;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #000;
 }

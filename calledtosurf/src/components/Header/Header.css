@@ -48,7 +48,7 @@
 .toolbar_content {
   align-items: center;
   justify-content: flex-end;
-  /* display: flex; */
+  display: flex;
 }
 
 .social_nav {

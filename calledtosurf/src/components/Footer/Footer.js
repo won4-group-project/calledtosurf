@@ -65,15 +65,14 @@ class Footer extends Component {
                           acceptCharset="UTF-8"
                           className="contact-form"
                         >
-                          <input type="hiden" name="utf8" value="customer" />
-                          <label for="Email" className="hidden-label">
-                            {" "}
-                            Enter your email
-                          </label>
                           <div className="footer__newsletter">
+                            {/* <label for="Email" className="hidden-label">
+                              {" "}
+                              // Enter your email
+                            </label> */}
                             <input
                               type="email"
-                              value
+                              // value
                               placeholder="Enter your email"
                               name="contact[email]"
                               id="Email"
@@ -86,11 +85,7 @@ class Footer extends Component {
                               className="footer__newsletter-btn"
                               name="commit"
                             >
-                              <img
-                                alt="email"
-                                src={email}
-                                className="icon icon-email"
-                              />
+                              <i class="far fa-envelope" />
                             </button>
                           </div>
                         </form>
