@@ -80,13 +80,13 @@ class Footer extends Component {
                               autoCorrect="off"
                               autoCapitalize="off"
                             />
-                            <button
+                            {/* <button
                               type="submit"
                               className="footer__newsletter-btn"
                               name="commit"
-                            >
-                              <i class="far fa-envelope" />
-                            </button>
+                            > */}
+                            <i class="far fa-envelope" />
+                            {/* </button> */}
                           </div>
                         </form>
                         <ul className="no-bullets footer__social">

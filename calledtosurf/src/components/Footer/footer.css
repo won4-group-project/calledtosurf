@@ -1,3 +1,14 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  position: relative;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 0.025em;
+  line-height: 1.4;
+}
+
 .site-footer_link {
   margin: 1;
   list-style: none;
@@ -142,6 +153,7 @@ input {
 
 form + .footer__social {
   margin-top: 30px;
+  display: flex;
 }
 .footer__social {
   margin: 0;
@@ -150,6 +162,7 @@ form + .footer__social {
 .footer__social a {
   display: block;
   color: #000;
+  margin-right: 20px;
 }
 
 a {
@@ -157,8 +170,8 @@ a {
   background: transparent;
 }
 .no-bullets img {
-  width: 20px;
-  height: 20px;
+  width: 23px;
+  height: 23px;
 }
 .icon {
   display: inline-block;
@@ -175,4 +188,18 @@ a {
   width: 100%;
   border: 0;
   border-bottom: 2px solid #000;
+}
+
+.far {
+  margin-left: -10px;
+  cursor: pointer;
+}
+.footer_powered_by {
+  font-size: 9.8px;
+  padding-top: 7.5px;
+  text-align: center;
+}
+
+.p {
+  margin: 0 0 15px 0;
 }
