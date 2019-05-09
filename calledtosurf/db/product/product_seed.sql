@@ -35,4 +35,508 @@ VALUES
 ('Top', 'Jackson Tee', 'Tee with bright stripes, short sleeves and contrasting ribbed neckline.', 'S M L', 24, 18),
 ('Top', 'Martina Top', 'Loose fitting embroidered crepe textured top with short sleeves, v-neckline and gathered waist. Lined.', 'XS S M L XL XXL', 44, 19),
 ('Top', 'Melody Top', 'Lightweight woven top with front buttons at the side and short tie sleeves.', 'S M L', 40, 20),
-('Top', 'Natasha Top', 'Loose fitting lightweight woven top with eyelet sleeves and yoke and embroidery at hem. Lined.', 'XS S M L XL', 46, 21)
+('Top', 'Natasha Top', 'Loose fitting lightweight woven top with eyelet sleeves and yoke and embroidery at hem. Lined.', 'XS S M L XL', 46, 21),
+('Top', 'Rosebud', 'Lightweight top with ruffles around neck, sleeves and hem.','S M L', 34, 22),
+('Top', 'Temecula Top', 'Soft knit pullover top with high round collar and single front patch pocket.', 'XS S M L XL XXL', 30, 23),
+('Top', 'Waymen Tee', 'Stripe round neck tee with short sleeves and split high/low hemline.', 'S M L', 28, 24),
+('Bottoms', 'Cocoa Short', 'Stretch denim short with fray hem.', 'XS S M L', 34, 25),
+('Bottoms', 'Desert Pant', 'High rise pant with paperbag waist, twist tie belt and pockets.', 'S M L', 49.95, 26),
+('Bottoms', 'Esme Jean', 'Skinny jeans with 5 pockets and button-up closure.', '0 2 4 6 8 10 12 14', 48, 27),
+('Bottoms', 'Exby Overall', 'Distressed loose fitting short overalls with front patch pocket.', 'S M L', 34, 28),
+('Bottoms', 'Hampshire Jean', 'Distressed skinny jeans with unhemmed ankles.', '0 2 4 6 8 10 12 14', 44, 29),
+('Bottoms', 'Harper Pant', 'Woven stripe pants with elastic waist, drawstring tie, and pockets.', 'S M L', 36, 30),
+('Bottoms', 'Lil Fleece Pant', 'Soft fleece sweatpants.', 'XS S M L', 25, 31),
+('Bottoms', 'Longwood Skinnys', 'Skinny cut corduroy pants.', '25 26 27 28 29 30 31', 68, 32),
+('Bottoms', 'Peirson Jean', 'Distressed skinny jeans with cut hem.', '24 25 26 27 28 29 30 31', 66, 33),
+('Bottoms', 'Skyline Overall,', 'Textured overall with large front patch pocket, tied straps with side buttons and back elastic waist.', 'S M L', 44, 34),
+('Bottoms', 'Sonnett Jean', 'Skinny jeans with a higher rise and frayed hemline.', '24 25 26 27 28 29 30 31', 58, 35),
+('Bottoms', 'Waycross Skinnys', 'Skinny jean with distressed knees and hem.', '24 25 26 27 28 29 30 31', 72, 36),
+('Swimwear', 'All Checked Out', 'Gingham print one piece swimsuit with narrow criss-cross adjustable straps. Cups are foam lined. Foam cups removable.', 'XS S M L XL', 54, 37),
+('Swimwear', 'All Tied Up', 'Floral print one piece swimsuit with narrow lace insets, narrow straps and lace-up back. Cups are foam lined. Foam cups removable.', 'XS S M L XL', 59, 38),
+('Swimwear', 'Classic Cut Out', 'Two color swimsuit with white ruched top and contrasting high waisted bottom with front cutout. Cups are foam lined. Foam cups removable.', 49.50, 39),
+('Swimwear', 'Flowers For Days', 'Textured floral print one piece swimsuit. Cups are foam lined. Foam cups removable.', 54, 40),
+('Swimwear', 'Nautical Stripe', 'Seer sucker textured stripe v-neck swimsuit with crisscross straps and contrasting trim. Fully lined. Cups are foam lined.', 'S M L', 40, 41),
+('Swimwear', 'Pinstripe One Piece', 'V-neck tank swimsuit with tie belt. Cups are foam lined. Foam cups removable.', 'XS S M L XL', 59.50, 42),
+('Swimwear', 'Poolside Criss-Cross', 'One piece swimsuit with lace-up back. Cups are foam lined. Foam cups removable.', 'XS S M L XL', 52, 43),
+('Swimwear', 'Scoop Neck Gingham', 'One piece swimsuit with lace-up back. Cups are foam lined. Foam cups removable.', 'XS S M L XL', 49.50, 44),
+('Swimwear', 'Signature Bow Tie', 'One piece tank swimsuit with v-neckline and bows inset in neckline. Cups are foam lined. Foam cups removable.', 'XS S M L XL', 59.50, 45),
+('Swimwear', 'The Beach Babe', 'One piece tank swimsuit with v-neckline and bows inset in neckline. Cups are foam lined. Foam cups removable.', 'XS S M L XL', 49.50, 46),
+('Swimwear', 'The Neapolitan', 'Tri color one piece tank swimsuit with crossing bodice panels - front & back. Cups are foam lined. Foam cups removable.', 'XS S M L XL', 56, 47),
+('Swimwear', 'Waist Tie One Piece', 'One piece tank style swimsuit with tie belt and can be tied in front or in back. Cups are foam lined. Foam cups removable.', 'XS S M L XL', 52, 48),
+('Boots', 'Barrow Bootie', 'Open toe bootie with low stacked heel.', '6 6.5 7 7.5 8 8.5 9 9.5 10', 46, 49),
+('Boots', 'Carter Bootie', 'Low heel shoe with strappy woven upper.', '5.5 6 6.5 7 7.5 8 8.5 9 10', 52, 50),
+('Boots', 'Carter Slip-On', 'Slip-on shoe with low stacked heel.', '5.5 6 6.5 7', 27, 51),
+('Boots', 'Karisa Bootie', 'Open toe bootie with low stacked heel.', '5.5 6 6.5 7 7.5 8 8.5 9 10', 36, 52),
+('Boots', 'Summer Black Bootie', 'Seychelles Closed toe shoe with side zipper and low stacked heel.', '6 6.5 7 7.5 8 8.5 9 9.5 10', 66, 53),
+('Boots', 'Summer Brown Bootie', 'Seychelles Closed toe shoe with side zipper and low stacked heel.', '6 6.5 7 7.5 8 8.5 9 9.5 10', 66, 54),
+('Boots', 'Summer Gray Bootie', 'Seychelles Closed toe shoe with side zipper and low stacked heel.', '6 6.5 7 7.5 8 8.5 9 9.5 10', 66, 55),
+('Boots', 'Ollie Black Bootie', 'Short heeled bootie with elastic side panels.', '5.5 6 6.5 7 7.5 8 8.5 9 10', 33, 56),
+('Boots', 'Ollie Brown Bootie', 'Short heeled bootie with elastic side panels.', '5.5 6 6.5 7 7.5 8 8.5 9 10', 33, 57),
+('Boots', 'Primetime Bootie', 'Low heel bootie with eyelet cutout detail.', '5.5 6 6.5 7 7.5 8 8.5 9 10', 27, 58),
+('Heels', 'Abba Black Clog', 'Closed toe Swedish clog.', '6 7 8 9 10', 99, 59),
+('Heels', 'Abba Brown Clog', 'Closed toe Swedish clog.', '6 7 8 9 10', 99, 60),
+('Heels', 'Abba Navy Clog', 'Closed toe Swedish clog.', '6 7 8 9 10', 99, 61),
+('Heels', 'Caris Heel', 'Stacked heel dress shoe wide straps and large buckle.', '5.5 6 6.5 7 7.5 8 8.5 9 10', 40, 62),
+('Heels', 'Doria Open Toe', 'Open toe sandal with staked heel and wide buckled ankle strap.', '5.5 6 6.5 7 7.5 8 8.5 9 10', 38, 63),
+('Heels', 'Madeline Clog', 'Wodden clogg with rubber sole and t-strap upper.', '6 7 8 9 10', 109, 64),
+('Sandals', 'Abby Sandal', 'Low platform sandal with buckle.', '6 6.5 7 7.5 8 8.5 9 9.5 10', 35, 65),
+('Sandals', 'Deana Brown Sandal', 'Flat sandal with criss -cross upper.', '6 6.5 7 7.5 8 8.5', 49, 66),
+('Sandals', 'Deana Black Sandal', 'Flat sandal with criss -cross upper.', '6 6.5 7 7.5 8 8.5', 49, 67),
+('Sandals', 'Lunna Black Sandal', 'Flat platform sandal with ankle strap.', '6 6.5 7 7.5 8 8.5 9 9.5 10', 69, 68),
+('Sandals', 'Lunna Brown Sandal', 'Flat platform sandal with ankle strap.', '6 6.5 7 7.5 8 8.5 9 9.5 10', 69, 69),
+('Sandals', 'Saige Gold Sandal', 'Slip-on platform sandal.', '6 6.5 7 7.5 8 8.5 9 9.5 10', 39, 70),
+('Sandals', 'Saige Silver Sandal', 'Slip-on platform sandal.', '6 6.5 7 7.5 8 8.5 9 9.5 10', 39, 71),
+('Sandals', 'Summer Pink Sandal', '2 buckle flat sandals.', '7', 24, 72),
+('Sandals', 'Summer White Sandal', '2 buckle flat sandals.', '5.5 5.6', 24, 73),
+('Sandals', 'Topic Black Sandal', 'Wedge platform sandal with ankle strap.', '5.5 6 6.5 7 7.5 8 8.5 9 10', 40, 74),
+('Sandals', 'Topic Tan Sandal', 'Wedge platform sandal with ankle strap.', '5.5 6 6.5 7 7.5 8 8.5 9 10', 40, 75),
+('Sandals', 'Yuka Strap Slide', 'Double strap slide shoes with thick sole.', '5.5 6 6.5 7 7.5 8 8.5 9 10', 36, 76),
+('Sneakers', 'Christian Black Sneaker', 'Lace-up sneaker with knit upper.', '6 6.5 7 7.5 8 8.5 9 9.5 10', 42, 77),
+('Sneakers', 'Christian Grey Sneaker', 'Lace-up sneaker with knit upper.', '6 6.5 7 7.5 8 8.5 9 9.5 10', 42, 78),
+('Sneakers', 'Black Canvas Sneaker', 'Lace-up platform sneaker with canvas upper.', '6 6.5 7 7.5 8 8.5 9 9.5 10', 52, 79),
+('Sneakers', 'White Canvas Sneaker', 'Lace-up platform sneaker with canvas upper.', '6 6.5 7 7.5 8 8.5 9 9.5 10', 52, 80),
+('Sneakers', 'Leather Sneaker', 'Keds Lace-up platform sneaker with leather upper.', '6 7 7.5 8 8.5 9 9.5 10', 60, 81),
+('Sneakers', 'Radial Sneaker', 'Slip on sneaker with laces, knit upper.', '6 7 8 9 10', 34, 82),
+('Sneakers', 'Roman Shoe', 'Shoe with huarache upper and rubber shoe sole.', '5.5 6 6.5 7 7.5 8 8.5 9 10', 46, 83),
+('Hats', 'Bryant Beanie', 'Knit beanie', 'One Size', 15, 84),
+('Hats', 'Eaton Hat', 'Felt brim hat with knotted hatband.', 'One Size', 38, 85),
+('Hats', 'Gunnison Hat', 'Faux suede brim hat with braided hat band.', 'One Size', 34, 86),
+('Hats', 'Jerome Hat', 'Felt brimmed hat with grosgrain ribbon hat band.', 'One Size', 38, 87),
+('Hats', 'Lux Cap', 'Billabong tie-dye cap.', 'One Size', 24.95, 88),
+('Hats', 'Mineral Wash Cap', 'Mineral wash baseball cap.', 'One Size', 16, 89),
+('Hats', 'RVCA Cap', 'RVCA print adjustable cap.', 'One Size', 27, 90),
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
