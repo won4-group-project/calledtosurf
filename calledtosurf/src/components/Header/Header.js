@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+// import "../Global/Global.css";
 import Twitter from "../../assets/Icons/twitter.png";
 import Pinterest from "../../assets/Icons/pinterest.png";
 import Instagram from "../../assets/Icons/instagram.png";
@@ -9,7 +10,6 @@ import Shopping from "../../assets/Icons/bag.png";
 import Nav from "../Nav/Nav";
 import "../Header/Header.css";
 import Facebook from "../../assets/Icons/fb.png";
-import "../../App.css";
 // import { fbind } from "q";
 class Header extends Component {
   render() {
