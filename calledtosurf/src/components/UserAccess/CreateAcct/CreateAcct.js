@@ -17,9 +17,10 @@ class CreateAcct extends Component {
                 last_name: '',
                 email: '',
                 password: '',
-
+                redirect: false
         }
         this.createNewUser = this.createNewUser.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
         
     }
     createNewUser(event) {
@@ -37,14 +38,7 @@ class CreateAcct extends Component {
         .then( res =>{
             console.log(res.data);
         })
-        // See if a user with the given email exists
-
-        // If a user with email does exist, return an error
-
-        // If a user with an email does not exist, create and save user record.
-
-        // Respond to request indicating the user was created
-
+       
     }
 
     render() {
