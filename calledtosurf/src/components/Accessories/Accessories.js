@@ -7,7 +7,7 @@ import hats from "../../assets/Accessories/Hats/94b.jpg";
 import purses from "../../assets/Accessories/Purses/115b.jpg";
 import jewelry from "../../assets/Accessories/Jewlery/jewelry.jpg";
 import filter from "../../assets/Icons/filter.png";
-
+import img2 from "../../assets/Accessories/Purses/115a.jpg";
 class Accessories extends Component {
   constructor() {
     super();
@@ -71,7 +71,22 @@ class Accessories extends Component {
             {this.state.shoes.map(shoe => (
               <Row className="shoes_div" border="default" id={shoe.product_id}>
                 <Col className="img_div">
-                  <img alt="poster" src={purses} />
+                  <a href="">
+                    <img
+                      alt="poster"
+                      src={purses}
+                      onMouseOver={e => (e.currentTarget.src = img2)}
+                      onMouseOut={e => (e.currentTarget.src = purses)}
+                    />
+                    <div className="grid-product__meta">
+                      <div className="grid-product__title grid-product__title--body">
+                        {shoe.title}
+                      </div>
+                      <div className="grid-product__price">
+                        ${shoe.price}.00
+                      </div>
+                    </div>
+                  </a>
                 </Col>
               </Row>
             ))}

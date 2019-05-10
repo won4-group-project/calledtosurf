@@ -7,6 +7,7 @@ import heels from "../../assets/Shoes/Heels/61a.jpg";
 import sandals from "../../assets/Shoes/Sandals/75b.jpg";
 import sneakers from "../../assets/Shoes/Sneakers/77a.jpg";
 import filter from "../../assets/Icons/filter.png";
+import next from "../../assets/Icons/next.png";
 class Shoes extends Component {
   constructor() {
     super();
@@ -54,12 +55,6 @@ class Shoes extends Component {
               <a href="" className="collection_item">
                 <img alt="poster" src={sneakers} />
                 <span className="collection_title"> Sneakers</span>
-                {/* <div className="grid-product__meta">
-                  <div className="grid-product__title grid-product__title--body">
-                  
-                  </div> 
-                  <div className="grid-product__title grid-product__title--body" />
-                </div> */}
               </a>
             </Col>
           </Row>
@@ -77,7 +72,12 @@ class Shoes extends Component {
               <Row className="shoes_div" border="default" id={shoe.product_id}>
                 <Col className="img_div">
                   <a href="">
-                    <img alt="poster" src={sandals} />
+                    <img
+                      alt="poster"
+                      src={sandals}
+                      onMouseOver={e => (e.currentTarget.src = sneakers)}
+                      onMouseOut={e => (e.currentTarget.src = sandals)}
+                    />
                     <div className="grid-product__meta">
                       <div className="grid-product__title grid-product__title--body">
                         {shoe.title}
@@ -91,6 +91,14 @@ class Shoes extends Component {
               </Row>
             ))}
           </div>
+          {/* <div className="pagination">
+            <span className="page ">1</span>
+            <span className="page ">2</span>
+            <span className="page ">3</span>
+            <span className="next ">
+              <img alt="next" src={next} />
+            </span>
+          </div> */}
         </div>
       </Container>
     );

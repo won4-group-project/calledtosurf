@@ -76,7 +76,12 @@ class Clothing extends Component {
               <Row className="shoes_div" border="default" id={shoe.product_id}>
                 <Col className="img_div">
                   <a href="">
-                    <img alt="poster" src={sandals} />
+                    <img
+                      alt="poster"
+                      src={sandals}
+                      onMouseOver={e => (e.currentTarget.src = sneakers)}
+                      onMouseOut={e => (e.currentTarget.src = sandals)}
+                    />
                     <div className="grid-product__meta">
                       <div className="grid-product__title grid-product__title--body">
                         {shoe.title}
