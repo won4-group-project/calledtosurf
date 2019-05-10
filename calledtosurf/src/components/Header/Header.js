@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../Global/Global.css";
+// import "../Global/Global.css";
 import Twitter from "../../assets/Icons/twitter.png";
 import Pinterest from "../../assets/Icons/pinterest.png";
 import Instagram from "../../assets/Icons/instagram.png";
