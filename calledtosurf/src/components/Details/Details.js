@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-
-class ProductDescription extends Component {
+import "../../components/Details/details.css";
+class Details extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -14,4 +14,4 @@ class ProductDescription extends Component {
   }
 }
 
-export default ProductDescription;
+export default Details;
