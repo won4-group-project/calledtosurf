@@ -29,10 +29,10 @@ class Shoes extends Component {
     });
   }
 
-  goToCarddetails = id => {
-    console.log("id" + id);
-    localStorage.setItem("selectedCard", id);
-    this.props.history.push(`/details/${id}`);
+  goToCarddetails = product_id => {
+    console.log("id" + product_id);
+    localStorage.setItem("selectedCard", product_id);
+    this.props.history.push(`/details/${product_id}`);
     // you can manage here to pass the clicked card id to the card details page if needed
   };
   render() {
@@ -84,7 +84,7 @@ class Shoes extends Component {
                       src={sandals}
                       onMouseOver={e => (e.currentTarget.src = sneakers)}
                       onMouseOut={e => (e.currentTarget.src = sandals)}
-                      onClick={() => this.goToCarddetails(shoe.id)}
+                      onClick={() => this.goToCarddetails(shoe.product_id)}
                     />
                     <div className="grid-product__meta">
                       <div className="grid-product__title grid-product__title--body">
