@@ -105,6 +105,22 @@ VALUES
 ('Hats', 'Lux Cap', 'Billabong tie-dye cap.', 'One Size', 24.95, 88),
 ('Hats', 'Mineral Wash Cap', 'Mineral wash baseball cap.', 'One Size', 16, 89),
 ('Hats', 'RVCA Cap', 'RVCA print adjustable cap.', 'One Size', 27, 90),
+('Hats', 'Stars & Stripes Cap', 'Baseball cap in patriotic colors.', 'One Size', 16, 91),
+('Hats', 'Sun Day Cap', 'Adjustable baseball cap with embroidered “called to surf” logo on back.', 'One Size', 16, 92), 
+('Hats', 'Surf Cap', 'Billabong adjustable cap with “SURF” embroidered graphic.', 'One Size', 22.95, 93),
+('Hats', 'Winnepeg Beanie', 'Soft chenille ribbed beanie.', 'One Size', 22, 94),
+('Hats', 'Winter Beanie', 'Rib knit beanie with pom pom.', 'One Size', 25, 95),
+('Jewelry', 'Box Chain Necklace', '16" Gold box chain necklace with a peach gem.', 'One Size', 14, 96),
+('Jewelry', 'Corded Bracelet', '9 strand corded bracelet with slide closure and single charm.', 'One Size', 6, 97),
+('Jewelry', 'Gold Beaded Chain', 'Vermeil chain in 3 lengths. Mix and match with letter tags, briolette stones and heart tags. Chains and other pendents available.', '16" 18" 20"', 18, 98),
+('Jewelry', 'Gold Hoop Earrings', '1" gold finish hoop earrings.', '1"', 10, 99),
+('Jewelry', 'Gold Wave Ring', 'Gold ring with band in wave shape.', '6 7', 12, 100),
+('Jewelry', 'Jeweled Color Necklace', '16" Gold Chain with multiple jewel colored stones.', 'One Size', 14, 101),
+('Jewelry', 'Letter Tag Necklace', '14K gold filled disc measuring approximately 3/8″ in block font. Mix and match pendants for initials and etc.', 'a b c d e f g h i j k l m n o p q r s t u v w x y z', 18.50, 102),
+('Jewelry', 'Love Ring Set', '14K set of 4 letter rings spelling the word “love” in lower case.', '5 6 2007', 64, 103),
+('Jewelry', 'Mom Tag', '14K gold filled disc measuring approximately .5″ in block font. Mix and match pendants for initials and etc. Chains and other pendents available.', 'One Size', 26, 104),
+('Jewelry', 'Mountain Bracelet', 'Double stranded bracelet with mountain cutout charm', 'One Size', 15, 105),
+('Jewelry', 'Star Earring', 'Gold finish 8 point star post earring.', '1.2', 10, 106),
 
 
 
