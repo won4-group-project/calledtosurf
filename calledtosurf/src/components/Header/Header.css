@@ -1,0 +1,279 @@
+.flex-ctr-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.black_b_white_txt {
+  background-color: black;
+  color: white;
+}
+#deal_var {
+  opacity: 1;
+  margin: 0 px;
+  padding: 0 px;
+  left: 0px;
+  height: 37px;
+  width: 100%;
+  z-index: 100000;
+  top: 0px;
+  position: fixed;
+  font-family: Helvetica;
+  font-size: 14px;
+}
+
+.deal {
+  margin-left: 5px;
+  color: rgb(255, 225, 0);
+  font-family: Helvetica;
+  font-size: 14px;
+}
+.toolbar {
+  margin-top: 40px;
+  background: #fff;
+  color: #000;
+  font-size: 11.9px;
+}
+
+.toolbar a {
+  color: black;
+}
+.page-width {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 17px;
+}
+.toolbar_content {
+  align-items: center;
+  justify-content: flex-end;
+  display: flex;
+}
+
+.social_nav {
+  flex: 0 1 auto;
+  padding: 0 5px;
+}
+
+.toolbar_social {
+  text-align: right;
+}
+
+.inline-list {
+  padding: 0;
+  margin: 0;
+}
+
+.inline-list li {
+  display: inline-block;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+.toolbar_social a {
+  display: block;
+  padding: 5px;
+}
+
+a {
+  text-decoration: none;
+  background: transparent;
+}
+
+.social_icon {
+  position: relative;
+  top: -2px;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+
+  vertical-align: middle;
+}
+.header-sticky-wrapper {
+  position: relative;
+}
+.site-header-sticky {
+  height: 213px;
+  /* background-color: red; */
+}
+
+.header-sticky-wrapper .site-header {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.site-header {
+  border-bottom: 1px solid #fff;
+  position: relative;
+  background: #fff;
+}
+
+.header-layout-center {
+  align-items: center;
+}
+.header-layout {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-item-left .site-nav {
+  margin-left: -12px;
+}
+.site-nav {
+  margin: 0;
+}
+
+.site-nav_link {
+  font-size: 14px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.site-nav_link {
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  padding: 7.5px 15px;
+  white-space: nowrap;
+  color: #000;
+}
+
+.icon-search {
+  width: 28px;
+  height: 28px;
+}
+.icon {
+  vertical-align: middle;
+  fill: currentColor;
+  display: inline-block;
+}
+.heade.header-layout[data-logo-align="center"] .header-item--navigation {
+  flex: 1 1 130px;
+}
+
+.header-item {
+  display: flex;
+  align-items: center;
+}
+
+.header-item-logo {
+  margin: 0 20px;
+  flex: 0 0 310px;
+}
+
+.header-layout[data-logo-align="center"] .site-header_logo {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.site-header_logo {
+  margin: 10px 0;
+  display: block;
+  font-size: 30px;
+}
+
+.header-item-icons {
+  float: 1 1 130px;
+}
+.header-item-icons .site-nav {
+  margin-right: -12px;
+}
+
+.site-nav {
+  margin-right: 0;
+}
+.site-nav_icons {
+  white-space: nowrap;
+}
+
+.site-nav_link {
+  font-size: 14px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.site-nav_link {
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  padding: 7.5px 15px;
+  white-space: nowrap;
+  color: #000;
+  font-size: 14px;
+}
+
+.icon.icon-user {
+  position: relative;
+  top: 1px;
+}
+
+.icon {
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+.cart-link {
+  position: relative;
+  display: block;
+  width: 28px;
+  height: 28px;
+}
+.site-header_logo a {
+  width: 310px;
+  color: #000;
+  text-decoration: none;
+  max-width: 100%;
+}
+
+.site-header__logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-center .site-navigation {
+  margin: 0 auto;
+}
+.site-navigation {
+  z-index: 2000;
+  position: relative;
+}
+.site-nav--is-megamenu.site-nav__item {
+  position: static;
+}
+
+.site-nav--has-dropdown {
+  z-index: 6;
+}
+.site-nav__item {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+}
+
+.site-nav--has-dropdown > .site-nav__link {
+  position: relative;
+  z-index: 6;
+}
+
+.site-nav__link {
+  font-size: 14px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.site-nav__link {
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  padding: 7.5px 15px;
+  white-space: nowrap;
+  color: #000;
+}

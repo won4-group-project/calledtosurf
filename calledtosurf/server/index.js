@@ -4,9 +4,10 @@ const bodyParser = require("body-parser");
 const massive = require("massive");
 const app = express();
 const controller = require("../server/controller");
-const cors = require("cors");
+const Auth = require("./controllers/auth");
+// const cors = require("cors");
 app.use(bodyParser.json());
-app.use(cors());
+// app.use(cors());
 
 massive(process.env.CONNECTION_STRING)
   .then(dbInstance => {
@@ -15,6 +16,11 @@ massive(process.env.CONNECTION_STRING)
   .catch(err => console.log(err));
 
 app.get("/api/shoes", controller.getAll);
+
+// ***** Authentication ***** //
+
+app.get("/login/", Auth.login);
+app.post("/signup", Auth.signup);
 
 // const port = process.env.SERVER_PORT;
 const port = 4000;

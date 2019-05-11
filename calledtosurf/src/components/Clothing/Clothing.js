@@ -1,14 +1,18 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Card, Container, Row, CardDeck, Col } from "react-bootstrap";
-import "../Shoes/shoes.css";
+import "../Clothing/clothing.css";
 import boots from "../../assets/Shoes/Boots/58a.jpg";
 import heels from "../../assets/Shoes/Heels/61a.jpg";
 import sandals from "../../assets/Shoes/Sandals/75b.jpg";
 import sneakers from "../../assets/Shoes/Sneakers/77a.jpg";
 import filter from "../../assets/Icons/filter.png";
-import next from "../../assets/Icons/next.png";
-class Shoes extends Component {
+import dress from "../../assets/Clothing/dress_collection.jpg";
+import tops from "../../assets/Clothing/top_collection.jpg";
+import bottom from "../../assets/Clothing/bottom_collection.jpg";
+import swim from "../../assets/Clothing/swim_collection.jpg";
+
+class Clothing extends Component {
   constructor() {
     super();
     this.state = {
@@ -35,26 +39,26 @@ class Shoes extends Component {
           <Row>
             <Col className="zoom">
               <a href="" className="collection_item">
-                <img alt="poster" src={boots} />
-                <span className="collection_title"> Boots</span>
+                <img alt="poster" src={dress} />
+                <span className="collection_title"> Dresses</span>
               </a>
             </Col>
             <Col className="zoom">
               <a href="" className="collection_item">
-                <img alt="poster" src={heels} />
-                <span className="collection_title"> Heels</span>
+                <img alt="poster" src={tops} />
+                <span className="collection_title"> Tops</span>
               </a>
             </Col>
             <Col className="zoom">
               <a href="" className="collection_item">
-                <img alt="poster" src={sandals} />
-                <span className="collection_title"> Sandals</span>
+                <img alt="poster" src={bottom} />
+                <span className="collection_title"> Bottoms</span>
               </a>
             </Col>
             <Col className="zoom">
               <a href="" className="collection_item">
-                <img alt="poster" src={sneakers} />
-                <span className="collection_title"> Sneakers</span>
+                <img alt="poster" src={swim} />
+                <span className="collection_title"> Swimwear</span>
               </a>
             </Col>
           </Row>
@@ -91,18 +95,10 @@ class Shoes extends Component {
               </Row>
             ))}
           </div>
-          {/* <div className="pagination">
-            <span className="page ">1</span>
-            <span className="page ">2</span>
-            <span className="page ">3</span>
-            <span className="next ">
-              <img alt="next" src={next} />
-            </span>
-          </div> */}
         </div>
       </Container>
     );
   }
 }
 
-export default Shoes;
+export default Clothing;
