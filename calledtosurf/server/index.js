@@ -7,7 +7,7 @@ const bodyParser = require("body-parser");
 const massive = require("massive");
 const app = express();
 const controller = require("../server/controller");
-const Auth = require("./controllers/auth");
+// const Auth = require("./controllers/auth");
 
 // ***** App Setup ***** //
 app.use(bodyParser.json());

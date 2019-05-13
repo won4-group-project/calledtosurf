@@ -7,6 +7,9 @@ import Accessories from "./components/Accessories/Accessories";
 import Clothing from "./components/Clothing/Clothing";
 import Home from "./App";
 import Account from "./components/UserAccess/Account/Account";
+import Details from "./components/Details/Details";
+
+
 export default (
   <Switch>
     <Route component={Home} exact path="/" />
@@ -16,5 +19,6 @@ export default (
     <Route component={Clothing} exact path="/clothing" />
     <Route component={Shoes} path="/shoes" />
     <Route component={Accessories} path="/accessories" />
+    <Route component={Details} path="/details" />
   </Switch>
 );
