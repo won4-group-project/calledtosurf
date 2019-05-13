@@ -86,7 +86,7 @@ class Header extends Component {
 
                     <div className="header-item header-item-logo">
                       <div className="h1 site-header_logo">
-                        <a href="" className="site-header_logo-link">
+                        <a href="/" className="site-header_logo-link">
                           <img alt="logo" src={Logo} />
                         </a>
                       </div>

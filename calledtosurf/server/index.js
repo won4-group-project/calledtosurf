@@ -20,6 +20,8 @@ app.get("/api/shoes", controller.getAll);
 // ***** Authentication ***** //
 
 app.get("/login/", Auth.login);
+app.get("/api/shoes/:id", products_controller.getOne);
+
 app.post("/signup", Auth.signup);
 
 // const port = process.env.SERVER_PORT;

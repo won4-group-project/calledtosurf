@@ -6,8 +6,11 @@ import Login from "./components/UserAccess/Login/Login";
 import Accessories from "./components/Accessories/Accessories";
 import Clothing from "./components/Clothing/Clothing";
 import Details from "./components/Details/Details";
+import Home from "./components/Home/Home";
 export default (
   <Switch>
+    <Route component={Home} exact path="/" />
+
     <Route component={CreateAcct} exact path="/createaccount" />
     <Route component={Login} exact path="/login" />
     <Route component={Clothing} exact path="/clothing" />
