@@ -7,7 +7,7 @@ category text,
 title text,
 description text,
 sizes text,
-price float(2),
+price float(3),
 item_num text
 );
 select * 
@@ -15,7 +15,6 @@ from products;
 
 
 INSERT INTO products (category, title, description, sizes, price, item_num) 
-
 VALUES 
 ('Dresses', 'Avondale Dress', 'Button-up dress with dirndle waist, embroidered front bodice, tie belt and front patch pockets.', 'S M L', 48 , 1), 
 ('Dresses', 'Carleton Dress', 'Lightweight woven print dress with flare sleeves, front buttons and tie belt.','XS S M L XL XXL', 54, 2 ),
@@ -55,8 +54,8 @@ VALUES
 ('Bottoms', 'Waycross Skinnys', 'Skinny jean with distressed knees and hem.', '24 25 26 27 28 29 30 31', 72, 36),
 ('Swimwear', 'All Checked Out', 'Gingham print one piece swimsuit with narrow criss-cross adjustable straps. Cups are foam lined. Foam cups removable.', 'XS S M L XL', 54, 37),
 ('Swimwear', 'All Tied Up', 'Floral print one piece swimsuit with narrow lace insets, narrow straps and lace-up back. Cups are foam lined. Foam cups removable.', 'XS S M L XL', 59, 38),
-('Swimwear', 'Classic Cut Out', 'Two color swimsuit with white ruched top and contrasting high waisted bottom with front cutout. Cups are foam lined. Foam cups removable.', 49, 39),
-('Swimwear', 'Flowers For Days', 'Textured floral print one piece swimsuit. Cups are foam lined. Foam cups removable.', 54, 40),
+('Swimwear', 'Classic Cut Out', 'Two color swimsuit with white ruched top and contrasting high waisted bottom with front cutout. Cups are foam lined. Foam cups removable.','XS S M L XL', 49, 39),
+('Swimwear', 'Flowers For Days', 'Textured floral print one piece swimsuit. Cups are foam lined. Foam cups removable.','XS S M L XL', 54, 40),
 ('Swimwear', 'Nautical Stripe', 'Seer sucker textured stripe v-neck swimsuit with crisscross straps and contrasting trim. Fully lined. Cups are foam lined.', 'S M L', 40, 41),
 ('Swimwear', 'Pinstripe One Piece', 'V-neck tank swimsuit with tie belt. Cups are foam lined. Foam cups removable.', 'XS S M L XL', 59, 42),
 ('Swimwear', 'Poolside Criss-Cross', 'One piece swimsuit with lace-up back. Cups are foam lined. Foam cups removable.', 'XS S M L XL', 52, 43),
