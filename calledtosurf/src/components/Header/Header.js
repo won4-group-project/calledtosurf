@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 // import "../Global/Global.css";
-import Twitter from "../../assets/Icons/Twitter.png";
-import Pinterest from "../../assets/Icons/Pinterest.png";
-import Instagram from "../../assets/Icons/Instagram.png";
+import Twitter from "../../assets/Icons/twitter.png";
+import Pinterest from "../../assets/Icons/pinterest.png";
+import Instagram from "../../assets/Icons/instagram.png";
 import Logo from "../../assets/Icons/CTS Logo.png";
 import Search from "../../assets/Icons/search_glass.png";
 import SignIn from "../../assets/Icons/avatar.png";

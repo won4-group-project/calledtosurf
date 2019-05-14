@@ -5,7 +5,10 @@ import CreateAcct from "./components/UserAccess/CreateAcct/CreateAcct";
 import Login from "./components/UserAccess/Login/Login";
 import Accessories from "./components/Accessories/Accessories";
 import Clothing from "./components/Clothing/Clothing";
+import Home from "./App";
+import Account from "./components/UserAccess/Account/Account";
 import Details from "./components/Details/Details";
+<<<<<<< HEAD
 import Home from "./components/Home/Home";
 export default (
   <Switch>
@@ -13,6 +16,16 @@ export default (
 
     <Route component={CreateAcct} exact path="/createaccount" />
     <Route component={Login} exact path="/login" />
+=======
+
+
+export default (
+  <Switch>
+    <Route component={Home} exact path="/" />
+    <Route component={CreateAcct} path="/createaccount" />
+    <Route component={Login} path="/login" />
+    <Route component={Account} path="/account" />
+>>>>>>> 3aee7bf619090d5312b42e2aba34c14359043b40
     <Route component={Clothing} exact path="/clothing" />
     <Route component={Shoes} path="/shoes" />
     <Route component={Accessories} path="/accessories" />

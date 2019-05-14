@@ -21,21 +21,36 @@ class Login extends Component {
     // }
 
     // I need to check the id against the db.  Once state has been set I need to do an axios call to varify the email.
-
-
+    
+   
 
 
 
     render() {
-        const apiUrl =
-          process.env.REACT_APP_LOGIN === "production"
-            ? process.env.REACT_APP_PROD_API_URL
-            : process.env.REACT_APP_DEV_API_URL;
 
         return (
             <section className="container flex-ctr-col">
                 <section className="form-wrapper">
-                    <Link href={apiUrl} >Login</Link>
+                    <h2>Login</h2>
+                    <form className="aln-cont-bl" onSubmit={this.handleSubmit} >
+                        <label>EMAIL</label>
+                        <Input className={""}
+                            inputType={"email"}
+                            name={"email"}
+                            value={this.state.email}
+                            onChange={this.handleChange}
+                        />
+                        <label>PASSWORD</label>
+                        <Input inputType="text"
+                            name="password"
+                            value={this.state.password}
+                            onChange={this.handleChange}
+                        />
+                        <input type="submit" value="SIGN IN" />
+                        {/* Convert this into a react Link */}
+                        <a href="/createAccount" >Create account</a>
+                    </form>
+                   
                 </section>
             </section>
         );
