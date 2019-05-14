@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import "../Footer/footer.css";
 import email from "../../assets/Icons/email.png";
-import Twitter from "../../assets/Icons/Twitter.png";
-import Pinterest from "../../assets/Icons/Pinterest.png";
-import Instagram from "../../assets/Icons/Instagram.png";
+import Twitter from "../../assets/Icons/twitter.png";
+import Pinterest from "../../assets/Icons/pinterest.png";
+import Instagram from "../../assets/Icons/instagram.png";
 import Facebook from "../../assets/Icons/fb.png";
 class Footer extends Component {
   constructor(props) {

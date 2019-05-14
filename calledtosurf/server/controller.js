@@ -3,7 +3,7 @@ module.exports = {
     const dbInstance = req.app.get("db");
 
     dbInstance.product
-      .get_all_product()
+      .get_product_by_images()
       .then(shoes => res.status(200).send(shoes))
       .catch(err => {
         res.status(500).send({
@@ -17,8 +17,8 @@ module.exports = {
     const dbInstance = req.app.get("db");
     const { product_id } = req.params;
 
-    dbInstance
-      .get_product_by_id(product_id)
+    dbInstance.product
+      .get_product_by_id(1)
       .then(shoes => res.status(200).send(shoes))
       .catch(err => {
         res.status(500).send({
