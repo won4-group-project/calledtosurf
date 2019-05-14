@@ -17,6 +17,7 @@ VALUES
 ('calledtosurf/src/assets/Clothing/Dresses/1a.png', 1, true),
 ('calledtosurf/src/assets/Clothing/Dresses/1b.png', 1, false),
 ('calledtosurf/src/assets/Clothing/Dresses/2a.png', 2, true),
+('calledtosurf/src/assets/Clothing/Dresses/2b.png', 2, false),
 ('calledtosurf/src/assets/Clothing/Dresses/3a.png', 3, true),
 ('calledtosurf/src/assets/Clothing/Dresses/3b.png', 3, false),
 ('calledtosurf/src/assets/Clothing/Dresses/4a.png', 4, true),
