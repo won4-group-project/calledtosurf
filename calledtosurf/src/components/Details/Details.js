@@ -16,7 +16,7 @@ class Details extends Component {
     console.log("shoes " + id);
 
     axios.get(`/api/shoes/${id}`).then(res => {
-      console.log("hello" + res);
+      console.log(res.data);
 
       this.setState({ shoes: res.data });
     });
@@ -30,7 +30,10 @@ class Details extends Component {
           <div className="grid grid--product-images-right">
             <div className="grid__item medium-up--two-fifths">
               <div className="product-single__meta" key={shoe.product_id}>
-                <img alt="img" src={shoe.img} />
+                <img alt="img" src={`/instagram.png`} />
+                {/* <img src={require("../../assets/Clothing/Dresses/1a.png")} /> */}
+
+                {/* ${shoe.img}`} /> */}
                 {shoe.id}
                 <h2 className="h2 product-single__title">{shoe.title}</h2>
                 <div className="price">

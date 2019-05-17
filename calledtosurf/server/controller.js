@@ -15,11 +15,13 @@ module.exports = {
   },
   getOne: (req, res, next) => {
     const dbInstance = req.app.get("db");
-    const { product_id } = req.params;
+    const { id } = req.params;
 
     dbInstance.product
-      .get_product_by_id(1)
+      .get_product_by_id(id)
       .then(shoes => res.status(200).send(shoes))
+      // .then(() => res.sendStatus(200))
+
       .catch(err => {
         res.status(500).send({
           errorMessage:
