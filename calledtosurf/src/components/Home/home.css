@@ -1,0 +1,9 @@
+.main-content {
+  min-height: 700px;
+  display: block;
+}
+
+.shg-box-vertical-align-wrapper {
+  display: flex;
+  width: 100%;
+}

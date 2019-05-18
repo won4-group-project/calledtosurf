@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../Footer/footer.css";
-import Email from "../../assets/Icons/email.png";
+import email from "../../assets/Icons/email.png";
 import Twitter from "../../assets/Icons/twitter.png";
 import Pinterest from "../../assets/Icons/pinterest.png";
 import Instagram from "../../assets/Icons/instagram.png";

@@ -5,10 +5,9 @@ import CreateAcct from "./components/UserAccess/CreateAcct/CreateAcct";
 import Login from "./components/UserAccess/Login/Login";
 import Accessories from "./components/Accessories/Accessories";
 import Clothing from "./components/Clothing/Clothing";
-import Home from "./components/Home/Home";
+import Home from "../src/components/Home/Home";
 import Account from "./components/UserAccess/Account/Account";
 import Details from "./components/Details/Details";
-
 
 export default (
   <Switch>

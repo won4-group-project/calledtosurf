@@ -33,7 +33,6 @@ class Shoes extends Component {
     console.log("id" + product_id);
     localStorage.setItem("selectedCard", product_id);
     this.props.history.push(`/details/${product_id}`);
-    // you can manage here to pass the clicked card id to the card details page if needed
   };
   render() {
     return (
