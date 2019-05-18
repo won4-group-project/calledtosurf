@@ -1,9 +1,12 @@
-.main-content {
-  min-height: 700px;
-  display: block;
+#links{
+    width: 100%;
+    background-color: white;
+    position: relative;
 }
 
-.shg-box-vertical-align-wrapper {
-  display: flex;
-  width: 100%;
+
+
+
+#heroImgB{
+    background-image: url('../../assets/HomePage/placeholder2.png');
 }
