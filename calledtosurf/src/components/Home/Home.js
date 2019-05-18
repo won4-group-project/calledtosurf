@@ -12,7 +12,7 @@ import DressTwo from '../Slideshow/components/DressCampaign/DressTwo/DressTwo';
 import DressThree from '../Slideshow/components/DressCampaign/DressThree/DressThree';
 import  ShoeOne from '../Slideshow/components/ShoesCampaign/ShoeOne/ShoeOne';
 import  ShoeTwo from '../Slideshow/components/ShoesCampaign/ShoeTwo/ShoeTwo';
-import  ShoeThree from '../Slideshow/components/ShoesCampaign/ShoeThree';
+import  ShoeThree from '../Slideshow/components/ShoesCampaign/ShoeThree/ShoeThree';
 import ProductLinkCard from "./ProductLinkCard/ProductLinkCard";
 
 class Home extends Component {
@@ -47,9 +47,8 @@ class Home extends Component {
                         btnLabel="accessories"
                     />
                 </section>
-                <Hero
-                    id="heroImgB"
-                    text="background image"
+                <Slideshow
+                    slides={this.state.GroupB}
                 />
             </div>
         );

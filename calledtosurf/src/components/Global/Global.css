@@ -44,6 +44,15 @@
     align-content: flex-end;
 }
 
+.flex-ctr-sb-col{
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: space-between;
+}
+
 /* Displays html element on the left side of the screen.  Similar to float. */
 .flex-lft-col{
     display: flex;
@@ -62,6 +71,8 @@
     align-items: center;
     align-content: flex-start;
 }
+
+
 
 .aln-cont-bl{
     display: flex;

@@ -7,7 +7,7 @@ const DressOne = props => {
 
     return (
         <div className="container flex-ctr-col" >
-            <a href="#"><img id="img-container" src={ImageOne} width="1000" alt="fashion"></img></a>
+            <a href="#"><img id="img-container" src={ImageOne} width="1300" alt="fashion"></img></a>
             <div id="position-1" className="shopNow">
                 <h1>This is a Title</h1>
                 <h3>This is sub-text</h3>

@@ -1,13 +1,13 @@
 import React from 'react';
 import '../../SlideShowStyles/SlideShowStyles.css';
 import './ShoeTwo.css';
-import ShoeImgTwo from '../../../assets/ShoeImages/Shoes2.png';
+import ShoeImgTwo from '../../../assets/ShoeImages/shoes2.png';
 
 const ShoeTwo = props => {
 
     return (
         <div className="container flex-ctr-col" >
-            <a href="#"><img id="img-container" src={ShoeImgTwo} width="1000" alt="fashion"></img></a>
+            <a href="#"><img id="img-container" src={ShoeImgTwo} width="1300" alt="fashion"></img></a>
             <div id="position-1" className="shopNow">
                 <h1>This is a Title</h1>
                 <h3>This is sub-text</h3>
