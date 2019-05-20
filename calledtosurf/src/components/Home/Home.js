@@ -1,7 +1,9 @@
 
 import React, { Component } from "react";
 import './Home.css';
-import OneA from '../../assets/Clothing/Dresses/1a.png';
+import CardA from '../Home/ProductLinkCard/Images/1a.png';
+import CardB from '../Home/ProductLinkCard/Images/2a.png';
+import CardC from '../Home/ProductLinkCard/Images/3a.png';
 import '../Global/Global.css';
 import Slideshow from '../Slideshow/components/Slideshow/Slideshow';
 import DressOne from '../Slideshow/components/DressCampaign/DressOne/DressOne';
@@ -29,17 +31,17 @@ class Home extends Component {
                 />
                 <section id="links" className="flex-ctr-row">
                     <ProductLinkCard
-                        src={OneA}
+                        src={CardA}
                         alt="Link to product page"
                         btnLabel="Dress"
                     />
                     <ProductLinkCard
-                        src={OneA}
+                        src={CardB}
                         alt="Link to product page"
                         btnLabel="shoes"
                     />
                     <ProductLinkCard
-                        src={OneA}
+                        src={CardC}
                         alt="Link to product page"
                         btnLabel="accessories"
                     />
