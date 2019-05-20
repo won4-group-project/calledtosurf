@@ -1,9 +1,6 @@
 
 import React, { Component } from "react";
-// import axios from "axios";
 import './Home.css';
-import Hero from '../Home/Hero/Hero';
-// import ProductLinkCard from '../Home/ProductLinkCard/ProductLinkCard';
 import OneA from '../../assets/Clothing/Dresses/1a.png';
 import '../Global/Global.css';
 import Slideshow from '../Slideshow/components/Slideshow/Slideshow';
@@ -26,7 +23,7 @@ class Home extends Component {
     render() {
 
         return (
-            <div className="flex-ctr-col">
+            <div className="container flex-ctr-col">
                 <Slideshow
                     slides={this.state.GroupA}
                 />
