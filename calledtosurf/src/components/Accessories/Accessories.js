@@ -2,32 +2,33 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Container, Row, Col } from "react-bootstrap";
 import "../Accessories/accessories.css";
-import glasses from "../../assets/Accessories/Glasses/glasses.jpg";
-import hats from "../../assets/Accessories/Hats/94b.jpg";
-import purses from "../../assets/Accessories/Purses/115b.jpg";
-import jewelry from "../../assets/Accessories/Jewlery/jewelry.jpg";
 import filter from "../../assets/Icons/filter.png";
-import img2 from "../../assets/Accessories/Purses/115a.jpg";
+import { Link } from "react-router-dom";
+
 class Accessories extends Component {
   constructor() {
     super();
     this.state = {
-      shoes: []
+      products: []
     };
-    this.getShoeList = this.getShoeList.bind(this);
   }
 
   componentDidMount() {
-    this.getShoeList();
-  }
+    const mainCategory = "Accessories";
+    console.log("mainCategory", mainCategory);
+    axios.get(`/api/categories/${mainCategory}`).then(res => {
+      console.log("Accessories", res.data);
 
-  getShoeList() {
-    axios.get("/api/shoes").then(res => {
-      console.log("shoesssss" + res.data);
-
-      this.setState({ shoes: res.data });
+      this.setState({ products: res.data });
     });
   }
+
+  goToCarddetails = product_id => {
+    console.log("id" + product_id);
+    localStorage.setItem("selectedCard", product_id);
+    this.props.history.push(`/details/${product_id}`);
+  };
+
   render() {
     return (
       <Container className="shoe_container">
@@ -35,27 +36,27 @@ class Accessories extends Component {
           <Row>
             <Col className="zoom">
               <a href="" className="collection_item">
-                <img alt="poster" src={glasses} />
+                <img alt="poster" src={`/Accessories/Glasses/glasses.jpg`} />
                 <span className="collection_title"> Sunglasses</span>
               </a>
             </Col>
             <Col className="zoom">
-              <a href="" className="collection_item">
-                <img alt="poster" src={hats} />
+              <Link to="/hats" className="collection_item">
+                <img alt="poster" src={`/Accessories/Hats/94b.jpg`} />
                 <span className="collection_title"> Hats</span>
-              </a>
+              </Link>
             </Col>
             <Col className="zoom">
-              <a href="" className="collection_item">
-                <img alt="poster" src={purses} />
+              <Link to="/purses" className="collection_item">
+                <img alt="poster" src={`/Accessories/Purses/115b.jpg`} />
                 <span className="collection_title"> Purses</span>
-              </a>
+              </Link>
             </Col>
             <Col className="zoom">
-              <a href="" className="collection_item">
-                <img alt="poster" src={jewelry} />
+              <Link to="/jewelry" className="collection_item">
+                <img alt="poster" src={`/Accessories/Jewlery/jewelry.jpg`} />
                 <span className="collection_title"> jewelry</span>
-              </a>
+              </Link>
             </Col>
           </Row>
           <div className="collection-filter">
@@ -68,15 +69,18 @@ class Accessories extends Component {
           </div>
 
           <div className="shoes_div">
-            {this.state.shoes.map(shoe => (
-              <Row className="shoes_div" border="default" id={shoe.product_id}>
+            {this.state.products.map(shoe => (
+              <Row className="shoes_div" border="default" key={shoe.product_id}>
                 <Col className="img_div">
                   <a href="">
                     <img
                       alt="poster"
-                      src={purses}
-                      onMouseOver={e => (e.currentTarget.src = img2)}
-                      onMouseOut={e => (e.currentTarget.src = purses)}
+                      src={`/${shoe.img}`}
+                      onMouseOver={e =>
+                        (e.currentTarget.src = `/${shoe.alt_img}`)
+                      }
+                      onMouseOut={e => (e.currentTarget.src = `/${shoe.img}`)}
+                      onClick={() => this.goToCarddetails(shoe.product_id)}
                     />
                     <div className="grid-product__meta">
                       <div className="grid-product__title grid-product__title--body">

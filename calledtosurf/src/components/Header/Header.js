@@ -14,7 +14,7 @@ import Facebook from "../../assets/Icons/fb.png";
 class Header extends Component {
   render() {
     return (
-      <div>
+      <div id="header-container">
         <div id="deal_var" className="flex-ctr-row black_b_white_txt">
           Free shipping for US orders over <span className="deal">$75</span>
         </div>

@@ -2,10 +2,17 @@
 /* This is where you can add your global colors to use them just use the var() method to use them.  */
 /* Examples: https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
 
-.colors {
+:root {
+    /* color variables */
 
     --black: black;
+
+
 }
+
+
+
+
 
 /* Centering Items */
 /* Remember that Display effects it's childs elements not the one it is assinged to */
@@ -37,6 +44,15 @@
     align-content: flex-end;
 }
 
+.flex-ctr-sb-col{
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: space-between;
+}
+
 /* Displays html element on the left side of the screen.  Similar to float. */
 .flex-lft-col{
     display: flex;
@@ -55,6 +71,8 @@
     align-items: center;
     align-content: flex-start;
 }
+
+
 
 .aln-cont-bl{
     display: flex;
