@@ -1,23 +1,24 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Container, Row, Col } from "react-bootstrap";
-import "../Accessories/accessories.css";
-import filter from "../../assets/Icons/filter.png";
-import { Link } from "react-router-dom";
+import { Card, Container, Row, CardDeck, Col } from "react-bootstrap";
+import "../../Shoes/shoes.css";
+import filter from "../../../assets/Icons/filter.png";
 
-class Accessories extends Component {
+class Shoes extends Component {
   constructor() {
     super();
     this.state = {
       products: []
     };
+    // this.getShoeList = this.getShoeList.bind(this);
   }
 
   componentDidMount() {
-    const mainCategory = "Accessories";
-    console.log("mainCategory", mainCategory);
-    axios.get(`/api/categories/${mainCategory}`).then(res => {
-      console.log("Accessories", res.data);
+    const category = "Boots";
+    console.log("category", category);
+
+    axios.get(`/api/category/${category}`).then(res => {
+      console.log("boots", res.data);
 
       this.setState({ products: res.data });
     });
@@ -31,34 +32,8 @@ class Accessories extends Component {
 
   render() {
     return (
-      <Container className="shoe_container">
+      <Container>
         <div>
-          <Row>
-            <Col className="zoom">
-              <a href="" className="collection_item">
-                <img alt="poster" src={`/Accessories/Glasses/glasses.jpg`} />
-                <span className="collection_title"> Sunglasses</span>
-              </a>
-            </Col>
-            <Col className="zoom">
-              <Link to="/hats" className="collection_item">
-                <img alt="poster" src={`/Accessories/Hats/94b.jpg`} />
-                <span className="collection_title"> Hats</span>
-              </Link>
-            </Col>
-            <Col className="zoom">
-              <Link to="/purses" className="collection_item">
-                <img alt="poster" src={`/Accessories/Purses/115b.jpg`} />
-                <span className="collection_title"> Purses</span>
-              </Link>
-            </Col>
-            <Col className="zoom">
-              <Link to="/jewelry" className="collection_item">
-                <img alt="poster" src={`/Accessories/Jewlery/jewelry.jpg`} />
-                <span className="collection_title"> jewelry</span>
-              </Link>
-            </Col>
-          </Row>
           <div className="collection-filter">
             <div className="filter_item">
               <img alt="filter" src={filter} className="filter_img" />
@@ -70,7 +45,7 @@ class Accessories extends Component {
 
           <div className="shoes_div">
             {this.state.products.map(shoe => (
-              <Row className="shoes_div" border="default" key={shoe.product_id}>
+              <Row className="shoes_div" border="default" id={shoe.product_id}>
                 <Col className="img_div">
                   <a href="">
                     <img
@@ -101,4 +76,4 @@ class Accessories extends Component {
   }
 }
 
-export default Accessories;
+export default Shoes;

@@ -8,6 +8,13 @@ import Clothing from "./components/Clothing/Clothing";
 import Home from "../src/components/Home/Home";
 import Account from "./components/UserAccess/Account/Account";
 import Details from "./components/Details/Details";
+import Boots from "./components/Shoes/Boots/Boots";
+import Heels from "./components/Shoes/Heels/Heels";
+import Sandals from "./components/Shoes/Sandals/Sandals";
+import Sneakers from "./components/Shoes/Sneakers/Sneakers";
+import Hats from "./components/Accessories/Hats/Hats";
+import Purses from "./components/Accessories/Purses/Purses";
+import Jewelry from "./components/Accessories/Jewelry/Jewelry";
 
 export default (
   <Switch>
@@ -19,5 +26,12 @@ export default (
     <Route component={Shoes} path="/shoes" />
     <Route component={Accessories} path="/accessories" />
     <Route component={Details} path="/details" />
+    <Route component={Boots} path="/boots" />
+    <Route component={Heels} path="/heels" />
+    <Route component={Sandals} path="/sandals" />
+    <Route component={Sneakers} path="/sneakers" />
+    <Route component={Hats} path="/hats" />
+    <Route component={Purses} path="/purses" />
+    <Route component={Jewelry} path="/jewelry" />
   </Switch>
 );

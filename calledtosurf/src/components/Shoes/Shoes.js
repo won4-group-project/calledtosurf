@@ -1,31 +1,25 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Card, Container, Row, CardDeck, Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import "../Shoes/shoes.css";
-import boots from "../../assets/Shoes/Boots/58a.jpg";
-import heels from "../../assets/Shoes/Heels/61a.jpg";
-import sandals from "../../assets/Shoes/Sandals/75b.jpg";
-import sneakers from "../../assets/Shoes/Sneakers/77a.jpg";
+import { Link } from "react-router-dom";
+
 import filter from "../../assets/Icons/filter.png";
-import next from "../../assets/Icons/next.png";
 class Shoes extends Component {
   constructor() {
     super();
     this.state = {
-      shoes: []
+      products: []
     };
-    this.getShoeList = this.getShoeList.bind(this);
   }
 
   componentDidMount() {
-    this.getShoeList();
-  }
+    const mainCategory = "Shoes";
 
-  getShoeList() {
-    axios.get("/api/shoes").then(res => {
-      console.log("shoesssss" + res.data);
+    axios.get(`/api/categories/${mainCategory}`).then(res => {
+      console.log("shoesssss", res.data[0]);
 
-      this.setState({ shoes: res.data });
+      this.setState({ products: res.data });
     });
   }
 
@@ -34,78 +28,72 @@ class Shoes extends Component {
     localStorage.setItem("selectedCard", product_id);
     this.props.history.push(`/details/${product_id}`);
   };
+
   render() {
     return (
       <Container className="shoe_container">
         <div>
           <Row>
             <Col className="zoom">
-              <a href="" className="collection_item">
-                <img alt="poster" src={boots} />
+              <Link to="/boots" className="collection_item">
+                <img alt="poster" src={`/Shoes/Boots/58a.jpg`} />
                 <span className="collection_title"> Boots</span>
-              </a>
+              </Link>
             </Col>
             <Col className="zoom">
-              <a href="" className="collection_item">
-                <img alt="poster" src={heels} />
+              <Link to="/heels" className="collection_item">
+                <img alt="poster" src={`/Shoes/Heels/61a.jpg`} />
                 <span className="collection_title"> Heels</span>
-              </a>
+              </Link>
             </Col>
             <Col className="zoom">
-              <a href="" className="collection_item">
-                <img alt="poster" src={sandals} />
+              <Link to="/sandals" className="collection_item">
+                <img alt="poster" src={`/Shoes/Sandals/75b.jpg`} />
                 <span className="collection_title"> Sandals</span>
-              </a>
+              </Link>
             </Col>
             <Col className="zoom">
-              <a href="" className="collection_item">
-                <img alt="poster" src={sneakers} />
+              <Link to="/sneakers" className="collection_item">
+                <img alt="poster" src={`/Shoes/Sneakers/77a.jpg`} />
                 <span className="collection_title"> Sneakers</span>
-              </a>
+              </Link>
             </Col>
           </Row>
-          <div className="collection-filter">
-            <div className="filter_item">
-              <img alt="filter" src={filter} className="filter_img" />
-              Filter
-            </div>
-            <div className="item_count">35 products</div>
-            <div className="item_sort">Sort</div>
-          </div>
+        </div>
 
-          <div className="shoes_div">
-            {this.state.shoes.map(shoe => (
-              <Row className="shoes_div" border="default" id={shoe.product_id}>
-                <Col className="img_div">
-                  <a href="">
-                    <img
-                      alt="poster"
-                      src={sandals}
-                      onMouseOver={e => (e.currentTarget.src = sneakers)}
-                      onMouseOut={e => (e.currentTarget.src = sandals)}
-                      onClick={() => this.goToCarddetails(shoe.product_id)}
-                    />
-                    <div className="grid-product__meta">
-                      <div className="grid-product__title grid-product__title--body">
-                        {shoe.title}
-                      </div>
-                      <div className="grid-product__price">
-                        ${shoe.price}.00
-                      </div>
-                    </div>
-                  </a>
-                </Col>
-              </Row>
-            ))}
+        <div className="collection-filter">
+          <div className="filter_item">
+            <img alt="filter" src={filter} className="filter_img" />
+            Filter
           </div>
-          {/* <div className="pagination">
-            <span className="page ">1</span>
-            <span className="page ">2</span>
-            <span className="page ">3</span>
-            <span className="next ">
-              <img alt="next" src={next} />
-            </span>
-          </div> */}
+          <div className="item_count">35 products</div>
+          <div className="item_sort">Sort</div>
+        </div>
+
+        <div className="shoes_div">
+          {this.state.products.map(shoe => (
+            <Row className="shoes_div" border="default" key={shoe.product_id}>
+              <Col className="img_div">
+                <a href="">
+                  <img
+                    alt="poster"
+                    src={`/${shoe.img}`}
+                    onMouseOver={e =>
+                      (e.currentTarget.src = `/${shoe.alt_img}`)
+                    }
+                    onMouseOut={e => (e.currentTarget.src = `/${shoe.img}`)}
+                    onClick={() => this.goToCarddetails(shoe.product_id)}
+                  />
+                  <div className="grid-product__meta">
+                    <div className="grid-product__title grid-product__title--body">
+                      {shoe.title}
+                    </div>
+                    <div className="grid-product__price">${shoe.price}.00</div>
+                  </div>
+                </a>
+              </Col>
+            </Row>
+          ))}
         </div>
       </Container>
     );

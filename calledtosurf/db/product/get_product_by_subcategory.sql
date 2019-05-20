@@ -2,5 +2,5 @@ select *
 from products p
 join images i
 on p.product_id = i.product_id
-where main_category = $1 ;
+where category= $1 ;
 

@@ -2,15 +2,8 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Card, Container, Row, CardDeck, Col } from "react-bootstrap";
 import "../Clothing/clothing.css";
-import boots from "../../assets/Shoes/Boots/58a.jpg";
-import heels from "../../assets/Shoes/Heels/61a.jpg";
-import sandals from "../../assets/Shoes/Sandals/75b.jpg";
-import sneakers from "../../assets/Shoes/Sneakers/77a.jpg";
+
 import filter from "../../assets/Icons/filter.png";
-import dress from "../../assets/Clothing/dress_collection.jpg";
-import tops from "../../assets/Clothing/top_collection.jpg";
-import bottom from "../../assets/Clothing/bottom_collection.jpg";
-import swim from "../../assets/Clothing/swim_collection.jpg";
 
 class Clothing extends Component {
   constructor() {
@@ -39,25 +32,25 @@ class Clothing extends Component {
           <Row>
             <Col className="zoom">
               <a href="" className="collection_item">
-                <img alt="poster" src={dress} />
+                <img alt="poster" src={`/Clothing/dress_collection.jpg`} />
                 <span className="collection_title"> Dresses</span>
               </a>
             </Col>
             <Col className="zoom">
               <a href="" className="collection_item">
-                <img alt="poster" src={tops} />
+                <img alt="poster" src={`/Clothing/top_collection.jpg`} />
                 <span className="collection_title"> Tops</span>
               </a>
             </Col>
             <Col className="zoom">
               <a href="" className="collection_item">
-                <img alt="poster" src={bottom} />
+                <img alt="poster" src={`/Clothing/bottom_collection.jpg`} />
                 <span className="collection_title"> Bottoms</span>
               </a>
             </Col>
             <Col className="zoom">
               <a href="" className="collection_item">
-                <img alt="poster" src={swim} />
+                <img alt="poster" src={`/Clothing/swim_collection.jpg`} />
                 <span className="collection_title"> Swimwear</span>
               </a>
             </Col>
@@ -78,9 +71,9 @@ class Clothing extends Component {
                   <a href="">
                     <img
                       alt="poster"
-                      src={sandals}
-                      onMouseOver={e => (e.currentTarget.src = sneakers)}
-                      onMouseOut={e => (e.currentTarget.src = sandals)}
+                      // src={sandals}
+                      // onMouseOver={e => (e.currentTarget.src = sneakers)}
+                      // onMouseOut={e => (ecurrentTarget.src = sandals)}
                     />
                     <div className="grid-product__meta">
                       <div className="grid-product__title grid-product__title--body">

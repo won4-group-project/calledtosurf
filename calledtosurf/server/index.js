@@ -15,12 +15,15 @@ massive(process.env.CONNECTION_STRING)
   })
   .catch(err => console.log(err));
 
-app.get("/api/shoes", controller.getAll);
+// app.get("/api/categories/:mainCategory", controller.getByMainCategory);
+app.get("/api/category/:category", controller.getByCategory);
 
 // ***** Authentication ***** //
 
 app.get("/login/", Auth.login);
 app.get("/api/shoes/:id", controller.getOne);
+
+// app.get("/api/clothings/:id", controller.getOne);
 
 // app.post("/signup", Auth.signup);
 
