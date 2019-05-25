@@ -4,7 +4,7 @@ import { Card, Container, Row, CardDeck, Col } from "react-bootstrap";
 import "../../Shoes/shoes.css";
 import filter from "../../../assets/Icons/filter.png";
 
-class Tops extends Component {
+class Bottoms extends Component {
   constructor() {
     super();
     this.state = {
@@ -14,11 +14,11 @@ class Tops extends Component {
   }
 
   componentDidMount() {
-    const category = "Top";
+    const category = "Swimwear";
     console.log("category", category);
 
     axios.get(`/api/category/${category}`).then(res => {
-      console.log("hats", res.data);
+      console.log("Swim", res.data);
 
       this.setState({ products: res.data });
     });
@@ -32,7 +32,7 @@ class Tops extends Component {
 
   render() {
     return (
-      <Container>
+      <Container className="shoe_container">
         <div>
           <div className="collection-filter">
             <div className="filter_item">
@@ -82,4 +82,4 @@ class Tops extends Component {
   }
 }
 
-export default Tops;
+export default Bottoms;

@@ -32,7 +32,7 @@ class Heels extends Component {
 
   render() {
     return (
-      <Container>
+      <Container className="shoe_container">
         <div>
           <div className="collection-filter">
             <div className="filter_item">

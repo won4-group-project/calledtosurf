@@ -3,101 +3,92 @@
 /* Examples: https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
 
 :root {
-    /* color variables */
+  /* color variables */
 
-    --black: black;
-
-
+  --black: black;
 }
-
-
-
-
 
 /* Centering Items */
 /* Remember that Display effects it's childs elements not the one it is assinged to */
 /* Centers things along the y axis or vertically */
 .flex-ctr-col {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
 /* Centers things along the x axis or horizontally */
-.flex-ctr-row{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    align-content: center; 
+.flex-ctr-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
 /* Pushes the content of a div to either side of the screen. */
-.flex-ctr-sb-row{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-    align-content: flex-end;
+.flex-ctr-sb-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  align-content: flex-end;
 }
 
-.flex-ctr-sb-col{
-    display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-	align-items: center;
-	align-content: space-between;
+.flex-ctr-sb-col {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-between;
 }
 
 /* Displays html element on the left side of the screen.  Similar to float. */
-.flex-lft-col{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    align-content: flex-start;
+.flex-lft-col {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
 }
 
-.flex-lft-row{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    align-content: flex-start;
+.flex-lft-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
 }
 
-
-
-.aln-cont-bl{
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
+.aln-cont-bl {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
 }
 
-.black_b_white_txt{
-    background-color: black;
-    color: white;
+.black_b_white_txt {
+  background-color: black;
+  color: white;
 }
 
-.white_b_black_txt{
-    background-color:white;
-    color: black;
-    font-family: 'Lato', sans-serif;
-    font-size: 14px;
+.white_b_black_txt {
+  background-color: white;
+  color: black;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
 }
 .container {
-    width: 100%;
+  width: 100%;
 }
 
 .form-wrapper {
-    background-color: var(--white);
-    width: 450px;
-    height: 600px;
+  background-color: var(--white);
+  width: 450px;
+  height: 600px;
 }
-

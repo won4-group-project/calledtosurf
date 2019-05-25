@@ -4,7 +4,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import "../Accessories/accessories.css";
 import filter from "../../assets/Icons/filter.png";
 import { Link } from "react-router-dom";
-
 class Accessories extends Component {
   constructor() {
     super();

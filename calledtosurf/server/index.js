@@ -21,6 +21,7 @@ app.get("/api/category/:category", controller.getByCategory);
 // ***** Authentication ***** //
 
 app.get("/login/", Auth.login);
+app.get("/api/products/:id", controller.getOne);
 
 // app.get("/api/clothings/:id", controller.getOne);
 
