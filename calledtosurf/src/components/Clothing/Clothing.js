@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Card, Container, Row, CardDeck, Col } from "react-bootstrap";
 import "../Clothing/clothing.css";
+import { Link } from "react-router-dom";
 
 import filter from "../../assets/Icons/filter.png";
 
@@ -9,50 +10,54 @@ class Clothing extends Component {
   constructor() {
     super();
     this.state = {
-      shoes: []
+      products: []
     };
-    this.getShoeList = this.getShoeList.bind(this);
   }
 
   componentDidMount() {
-    this.getShoeList();
-  }
+    const mainCategory = "Clothings";
+    console.log("mainCategory", mainCategory);
+    axios.get(`/api/categories/${mainCategory}`).then(res => {
+      console.log("Accessories", res.data);
 
-  getShoeList() {
-    axios.get("/api/shoes").then(res => {
-      console.log("shoesssss" + res.data);
-
-      this.setState({ shoes: res.data });
+      this.setState({ products: res.data });
     });
   }
+
+  goToCarddetails = product_id => {
+    console.log("id" + product_id);
+    localStorage.setItem("selectedCard", product_id);
+    this.props.history.push(`/details/${product_id}`);
+  };
+
   render() {
     return (
       <Container className="shoe_container">
         <div>
           <Row>
             <Col className="zoom">
-              <a href="" className="collection_item">
+              <Link to="/dresses" className="collection_item">
                 <img alt="poster" src={`/Clothing/dress_collection.jpg`} />
                 <span className="collection_title"> Dresses</span>
-              </a>
+              </Link>
             </Col>
             <Col className="zoom">
-              <a href="" className="collection_item">
+              <Link to="/tops" className="collection_item">
                 <img alt="poster" src={`/Clothing/top_collection.jpg`} />
                 <span className="collection_title"> Tops</span>
-              </a>
+              </Link>
             </Col>
             <Col className="zoom">
-              <a href="" className="collection_item">
+              <Link to="/bottoms" className="collection_item">
                 <img alt="poster" src={`/Clothing/bottom_collection.jpg`} />
                 <span className="collection_title"> Bottoms</span>
-              </a>
+              </Link>
             </Col>
             <Col className="zoom">
-              <a href="" className="collection_item">
+              <Link to="/swim" className="collection_item">
                 <img alt="poster" src={`/Clothing/swim_collection.jpg`} />
                 <span className="collection_title"> Swimwear</span>
-              </a>
+              </Link>
             </Col>
           </Row>
           <div className="collection-filter">
@@ -65,22 +70,31 @@ class Clothing extends Component {
           </div>
 
           <div className="shoes_div">
-            {this.state.shoes.map(shoe => (
-              <Row className="shoes_div" border="default" id={shoe.product_id}>
+            {this.state.products.map(clothing => (
+              <Row
+                className="shoes_div"
+                border="default"
+                key={clothing.product_id}
+              >
                 <Col className="img_div">
                   <a href="">
                     <img
                       alt="poster"
-                      // src={sandals}
-                      // onMouseOver={e => (e.currentTarget.src = sneakers)}
-                      // onMouseOut={e => (ecurrentTarget.src = sandals)}
+                      src={`/${clothing.img}`}
+                      onMouseOver={e =>
+                        (e.currentTarget.src = `/${clothing.alt_img}`)
+                      }
+                      onMouseOut={e =>
+                        (e.currentTarget.src = `/${clothing.img}`)
+                      }
+                      onClick={() => this.goToCarddetails(clothing.product_id)}
                     />
                     <div className="grid-product__meta">
                       <div className="grid-product__title grid-product__title--body">
-                        {shoe.title}
+                        {clothing.title}
                       </div>
                       <div className="grid-product__price">
-                        ${shoe.price}.00
+                        ${clothing.price}.00
                       </div>
                     </div>
                   </a>
@@ -93,5 +107,4 @@ class Clothing extends Component {
     );
   }
 }
-
 export default Clothing;

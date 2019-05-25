@@ -15,6 +15,10 @@ import Sneakers from "./components/Shoes/Sneakers/Sneakers";
 import Hats from "./components/Accessories/Hats/Hats";
 import Purses from "./components/Accessories/Purses/Purses";
 import Jewelry from "./components/Accessories/Jewelry/Jewelry";
+import Dresses from "./components/Clothing/Dresses/Dresses";
+import Tops from "./components/Clothing/Tops/Tops";
+import Bottoms from "./components/Clothing/Bottoms/Bottoms";
+import Swim from "./components/Clothing/Swim/Swim";
 
 export default (
   <Switch>
@@ -33,5 +37,9 @@ export default (
     <Route component={Hats} path="/hats" />
     <Route component={Purses} path="/purses" />
     <Route component={Jewelry} path="/jewelry" />
+    <Route component={Dresses} path="/dresses" />
+    <Route component={Tops} path="/tops" />
+    <Route component={Bottoms} path="/bottoms" />
+    <Route component={Swim} path="/swim" />
   </Switch>
 );

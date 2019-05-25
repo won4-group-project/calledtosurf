@@ -9,33 +9,33 @@ class Details extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      product: []
+      products: []
     };
   }
 
   componentDidMount() {
     let id = localStorage.getItem("selectedCard");
-    console.log("shoes ", id);
-    axios.get(`/api/shoes/${id}`).then(res => {
+    console.log("product ", id);
+    axios.get(`/api/products/${id}`).then(res => {
       console.log("shoe details", res.data);
-      this.setState({ product: res.data });
+      this.setState({ products: res.data });
     });
   }
 
   render() {
     return (
       <div className="page-content page-content--product">
-        {this.state.product.map(shoe => (
+        {this.state.products.map(product => (
           <div className="page-width">
             <div
               className="grid grid--product-images-right"
-              key={shoe.product_id}
+              key={product.product_id}
             >
               <div className="grid__item medium-up--two-fifths">
                 <div className="product-single__meta">
-                  <h2 className="h2 product-single__title">{shoe.title}</h2>
+                  <h2 className="h2 product-single__title">{product.title}</h2>
                   <div className="price">
-                    <span className="product__price">${shoe.price}.00</span>
+                    <span className="product__price">${product.price}.00</span>
                   </div>
                   <div className="product_size">
                     <span className="product_size">size</span>
@@ -43,7 +43,7 @@ class Details extends Component {
 
                   <div className="size">
                     <span className="product__size">6</span>
-                    <span className="product__size">{shoe.sizes}</span>
+                    <span className="product__size">{product.sizes}</span>
                     <span className="product__size">7</span>
                     <span className="product__size">7.5</span>
                     <span className="product__size">8</span>
@@ -54,7 +54,7 @@ class Details extends Component {
                     <button className="add_to_cart">Add to cart</button>
                   </div>
                   <div className="description">
-                    <span className="product_desc"> {shoe.description}</span>
+                    <span className="product_desc"> {product.description}</span>
                   </div>
                   <div className="social">
                     <img alt="fb" src={facebook} className="social_icon" />
@@ -76,7 +76,7 @@ class Details extends Component {
                             <div className="photo-zoom-link photo-zoom-link--enable">
                               <img
                                 alt="img"
-                                src={`/${shoe.img}`}
+                                src={`/${product.img}`}
                                 className="lazyautosizes lazyloaded"
                               />
                             </div>
@@ -93,7 +93,7 @@ class Details extends Component {
                             <div className="product__thumb product__thumb-2087222771805 js-no-transition">
                               <img
                                 alt=""
-                                src={`/${shoe.alt_img}`}
+                                src={`/${product.alt_img}`}
                                 class="animation-delay-3 lazyautosizes lazyloaded"
                               />
                             </div>
@@ -104,7 +104,7 @@ class Details extends Component {
                             <div className="product__thumb product__thumb-2087222771805 js-no-transition">
                               <img
                                 alt=""
-                                src={`/${shoe.img}`}
+                                src={`/${product.img}`}
                                 class="animation-delay-3 lazyautosizes lazyloaded"
                               />
                             </div>

@@ -4,7 +4,7 @@ import { Card, Container, Row, CardDeck, Col } from "react-bootstrap";
 import "../../Shoes/shoes.css";
 import filter from "../../../assets/Icons/filter.png";
 
-class Shoes extends Component {
+class Purses extends Component {
   constructor() {
     super();
     this.state = {
@@ -82,4 +82,4 @@ class Shoes extends Component {
   }
 }
 
-export default Shoes;
+export default Purses;

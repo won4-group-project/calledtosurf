@@ -3,8 +3,8 @@ import axios from "axios";
 import { Card, Container, Row, CardDeck, Col } from "react-bootstrap";
 import "../../Shoes/shoes.css";
 import filter from "../../../assets/Icons/filter.png";
-
-class Shoes extends Component {
+// import "../accessories.css";
+class Hats extends Component {
   constructor() {
     super();
     this.state = {
@@ -32,7 +32,7 @@ class Shoes extends Component {
 
   render() {
     return (
-      <Container>
+      <Container className="shoe_container">
         <div>
           <div className="collection-filter">
             <div className="filter_item">
@@ -82,4 +82,4 @@ class Shoes extends Component {
   }
 }
 
-export default Shoes;
+export default Hats;

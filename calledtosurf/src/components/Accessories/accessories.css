@@ -2,9 +2,10 @@ body,
 html {
   background-color: #ffffff !important;
 }
+
 .shoe_container {
   min-height: 200vh;
-  width: 80%;
+  /* width: 80%; */
   z-index: 100;
   margin: 0 auto;
   justify-content: center;
@@ -151,7 +152,7 @@ html {
   margin: 10px;
 }
 .img_div img {
-  height: 550px;
+  height: 500px;
   width: 350px;
   margin-left: -22px;
   padding-left: 22px;

@@ -3,7 +3,7 @@ import axios from "axios";
 import { Card, Container, Row, CardDeck, Col } from "react-bootstrap";
 import "../../Shoes/shoes.css";
 import filter from "../../../assets/Icons/filter.png";
-class Shoes extends Component {
+class Sandals extends Component {
   constructor() {
     super();
     this.state = {
@@ -75,4 +75,4 @@ class Shoes extends Component {
   }
 }
 
-export default Shoes;
+export default Sandals;

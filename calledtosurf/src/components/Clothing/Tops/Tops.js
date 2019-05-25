@@ -4,7 +4,7 @@ import { Card, Container, Row, CardDeck, Col } from "react-bootstrap";
 import "../../Shoes/shoes.css";
 import filter from "../../../assets/Icons/filter.png";
 
-class Sneakers extends Component {
+class Tops extends Component {
   constructor() {
     super();
     this.state = {
@@ -14,11 +14,11 @@ class Sneakers extends Component {
   }
 
   componentDidMount() {
-    const category = "Sneakers";
+    const category = "Top";
     console.log("category", category);
 
     axios.get(`/api/category/${category}`).then(res => {
-      console.log("Sneakers", res.data);
+      console.log("hats", res.data);
 
       this.setState({ products: res.data });
     });
@@ -44,25 +44,31 @@ class Sneakers extends Component {
           </div>
 
           <div className="shoes_div">
-            {this.state.products.map(shoe => (
-              <Row className="shoes_div" border="default" id={shoe.product_id}>
+            {this.state.products.map(product => (
+              <Row
+                className="shoes_div"
+                border="default"
+                id={product.product_id}
+              >
                 <Col className="img_div">
                   <a href="">
                     <img
                       alt="poster"
-                      src={`/${shoe.img}`}
+                      src={`/${product.img}`}
                       onMouseOver={e =>
-                        (e.currentTarget.src = `/${shoe.alt_img}`)
+                        (e.currentTarget.src = `/${product.alt_img}`)
                       }
-                      onMouseOut={e => (e.currentTarget.src = `/${shoe.img}`)}
-                      onClick={() => this.goToCarddetails(shoe.product_id)}
+                      onMouseOut={e =>
+                        (e.currentTarget.src = `/${product.img}`)
+                      }
+                      onClick={() => this.goToCarddetails(product.product_id)}
                     />
                     <div className="grid-product__meta">
                       <div className="grid-product__title grid-product__title--body">
-                        {shoe.title}
+                        {product.title}
                       </div>
                       <div className="grid-product__price">
-                        ${shoe.price}.00
+                        ${product.price}.00
                       </div>
                     </div>
                   </a>
@@ -76,4 +82,4 @@ class Sneakers extends Component {
   }
 }
 
-export default Sneakers;
+export default Tops;
