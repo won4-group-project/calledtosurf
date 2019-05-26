@@ -170,7 +170,7 @@ body {
   transition: opacity 0.4s ease;
 }
 .product__thumbs--beside .product__thumb-item {
-  margin-bottom: 55px;
+  margin-bottom: 100px;
   padding-bottom: 10px;
 }
 
