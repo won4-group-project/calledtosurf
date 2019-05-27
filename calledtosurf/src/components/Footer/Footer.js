@@ -91,24 +91,36 @@ class Footer extends Component {
                         </form>
                         <ul className="no-bullets footer__social">
                           <li>
-                            <a href="" title="Called to surf on Facebook">
+                            <a
+                              href="https://www.facebook.com/CalledtoSurf"
+                              title="Called to surf on Facebook"
+                            >
                               <img alt="faceboob" src={Facebook} />
                             </a>
                           </li>
 
                           <li>
-                            <a href="" title="Called to surf on Twitter">
+                            <a
+                              href="https://twitter.com/calledtosurf?lang=en"
+                              title="Called to surf on Twitter"
+                            >
                               <img alt="twitter" src={Twitter} />
                             </a>
                           </li>
                           <li>
-                            <a href="" title="Called to surf on Pinterest">
+                            <a
+                              href="https://www.pinterest.com/calledtosurf/"
+                              title="Called to surf on Pinterest"
+                            >
                               <img alt="pinterest" src={Pinterest} />
                             </a>
                           </li>
 
                           <li>
-                            <a href="" title="Called to surf on Instagram">
+                            <a
+                              href="https://www.instagram.com/calledtosurf/"
+                              title="Called to surf on Instagram"
+                            >
                               <img alt="instagram" src={Instagram} />
                             </a>
                           </li>
